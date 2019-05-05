@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var sc = prompt("Enter", "10");
+        document.write(sc);
+        console.log(sc);
+        alert(sc);
+
+
+        var confirm = confirm("Вы уверены?");
+        //document.write(confirm);
+        console.log(confirm);
+        if(confirm ==true){
+            document.write("true");
+        }
+
+        switch (confirm){
+            case true :
+            {
+                document.write("<br/>ok");
+            }
+                break;
+            case false :
+            {
+                document.write("<br/> cancel ");
+            }
+                break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

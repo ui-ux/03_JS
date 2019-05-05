@@ -1,0 +1,27 @@
+<!--
+    Конструктор Function позволяет динамически создавать и компилировать анонимные функции.
+    Конструктор Function принимает неограниченное количество параметров, последний параметр
+    всегда является телом создаваемой функции, параметры, которые передаются в начале
+    списка аргументов Function, являются входными параметрами для генерируемой функции.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object function</title>
+    <script>
+        var func = new Function("x", "y", "return x + y");
+        var res = func(10,10);
+        document.write(res);
+
+        var func2 = new Function("document.write('<br/>test')");
+        func2();
+
+        // var func3 = new Function("alert('test')");
+        // func3();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

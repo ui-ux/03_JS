@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>childNodes</title>
+    <script>
+        window.onload = function () {
+
+            var e = document.getElementById("list");
+
+            // childNodes - получение всех дочерних узлов.
+            for (var i = 0; i < e.childNodes.length; ++i) {
+                var temp = e.childNodes[i];
+
+                // если найденный узел не элемент то пропустить его
+                if (temp.nodeType != 1) {
+                    continue;
+                }
+                e.childNodes[i].style.color = "red";
+            }
+
+
+            var test = document.getElementById("test")
+            var sum = e.childNodes.length;
+            if (sum == 3){
+                test.innerHTML = "  == 3";
+                test.removeChild()
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="list"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>
+
+    <p id="test">
+
+    </p>
+</body>
+</html>

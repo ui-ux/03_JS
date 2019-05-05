@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval</title>
+    <script>
+        window.onload = function (){
+            var a =0;
+            function Func(){
+                a++;
+                document.getElementById("main").innerHTML=a;
+            }
+
+            setInterval(Func,2000);
+            // отмена задержки, которая была установлена на строке 9
+            clearTimeout
+        }
+    </script>
+</head>
+<body>
+    <p id = "main">
+        start
+    </p>
+</body>
+</html>

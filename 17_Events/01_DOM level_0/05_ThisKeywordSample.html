@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ключевое слово this в обработчике</title>
+    <script>
+        window.onload = function () {
+
+            var pArr = document.getElementsByTagName("p");
+
+            for (var i = 0; i < pArr.length; i++) {
+                pArr[i].onclick = function(){
+                    this.style.backgroundColor = "red";
+                }
+            }
+
+        }
+    </script>
+    <style>
+        p {
+            background-color:green;
+            float: left;
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+</html>

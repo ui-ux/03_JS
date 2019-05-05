@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ParentNodes</title>
+    <script>
+        window.onload = function(){
+            var e = document.getElementById("test2");
+            var d = document.getElementById("list");
+
+            e.parentNode.style.color = "red";
+            d.firstChild.style.backgroundColor = "yellow";
+            d.lastChild.style.backgroundColor = "blue";
+
+/*
+            // nextSibling - получение следующего узла,
+            // который находиться на одном уровне с текущим
+            // (узлы имеют общий родительский узел)
+            e.nextSibling.style.color = "red";
+
+            // previousSibling - получение предыдущего узла,
+            // который находиться на одном уровне с текущим.
+            e.previousSibling.style.color = "green";
+*/
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+<ul id="list"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>
+    <div>
+        <p>test
+            <h3 id="test2">
+                test 2
+            </h3>
+        </p>
+        <p>
+            test 3
+        </p>
+    </div>
+</body>
+</html>

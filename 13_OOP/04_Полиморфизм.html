@@ -1,0 +1,46 @@
+<!--
+Полиморфи́зм (в языках программирования) — возможность объектов с
+ одинаковой спецификацией иметь различную реализацию.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Полиморфизм</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Animals(name){
+        this.name = name;
+        this.foods = function(){
+            this.fds = prompt("Enter food", "meat");
+            document.write("this.name = " + this.name + "<br/>this.fsd = " + this.fds);
+
+        }
+    }
+    var animals = new Animals("Dgek");
+    animals.foods();
+
+    document.write("<br/>");
+    document.write("<br/>");
+
+    function Cat(name){
+        this.name = name;
+        this.foods = function(){
+            // переопределение метода из базовой функции-конструктора (override).
+
+            this.fds = prompt("Enter food", "milk");
+            document.write("this.name 1 = " + this.name + "<br/>this.fsd 1= " + this.fds);
+
+        }
+    }
+
+    Cat.prototype = animals;
+
+    var cats = new Cat("Myrchik");
+    cats.foods();
+
+</script>
+</html>

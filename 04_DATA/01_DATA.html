@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+    <script>
+        var then = new Date(2016, 0, 1); //первый день первого месяца (0-первый месяц)
+        var later = new Date(2016,0,1,17,10,30); //таже дата в 17:10:30
+
+        var now = new Date(); // текущая дата
+        var year = now.getFullYear(); // 2016
+        var mon = now.getMonth();//месяц
+        var date = now.getDate(); // счет дней начиная с единицы
+        var day = now.getDay(); // день недели (0 - воскр).
+        var sdata = now.toLocaleDateString(); // текущая дата
+        var tdata = now.toLocaleTimeString(); // текущее время
+        var elapsed = now - then; // разность дат: инт ервал в милесекундах
+
+
+        document.write(then);
+        document.write("</br>" + later);
+        document.write("</br>" + now);
+        document.write("</br>" + elapsed);
+        document.write("</br>" + year);
+        document.write("</br>" + mon);
+        document.write("</br>" + date);
+        document.write("</br>" + day);
+        document.write("</br>" + sdata);
+        document.write("</br>" + tdata);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    // Функция-конструктор для создания объектов Human.
+    function Human(x,y) {
+        // свойство
+        this.firstName = x;
+        this.lastName = y;
+
+        // метод - свойство объекта, которое содежит значение в виде функции.
+        this.sayHello = function () {
+            document.write("Hello! My name is " + this.firstName + " " + this.lastName);
+        };
+
+        // функция экзепляра
+        this.getArea = function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    // Создание двух экземпляров типа Human
+    var h = new Human("Homer","Simpson");
+    var r = new Human((prompt("You Name  ","Homi 2")),"Simp 2");
+
+    // Вызов метода SayHello() на созданых обьектах.
+    h.sayHello();
+    document.write("<br/>");
+    r.sayHello();
+
+    document.write("<br/>");
+    document.write(h.getArea());
+
+</script>
+</html>

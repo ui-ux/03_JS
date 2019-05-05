@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Point(x,y,z){
+        // свойства экземпляра
+        this.x = x;
+        this.y = y;
+        this.z = z;
+
+        // метод экземпляра
+        this.sayHello = function(){
+            document.write("this.z = " + this.z + "<br/>")
+        };
+    }
+
+
+    var lstr = new Point(10,12);
+    //lstr.x = 222;
+    //lstr.y = 222;
+    //document.write(lstr.x + lstr.y);
+
+    var bnf = new Point(222,"test",333);
+
+    bnf.sayHello();
+
+
+
+    // свойство функции конструктора (аналог статических свойств).
+    Point.test = "test point";
+
+    // Метод функции-конструктора (аналог статическгого метода).
+    Point.getOrigin = function () {
+        return new Point(0,0,999); // this использовать недопустимо.
+    };
+
+    Point.getOrigin().sayHello();
+
+    document.write("<br/>" +lstr.x);
+    document.write("<br/>" + lstr.y);
+
+    document.write("<br/>" + bnf.x);
+    document.write("<br/>" + bnf.y);
+    document.write("<br/>" + bnf.z);
+
+    document.write("<br/>" + Point.test);
+</script>
+</html>

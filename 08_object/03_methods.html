@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>methods</title>
+    <script>
+        var test = {
+            name: "NAME",
+            sname: "SNAME",
+            fname: "FNAME",
+            good: function(){
+                document.write("good: function(){} = " + this.name);
+                document.write("<br/>good: function(){} = " + this.sname);
+            }
+        };
+        test.good();
+
+
+        for(elem in test){
+            document.write(test[elem]);
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

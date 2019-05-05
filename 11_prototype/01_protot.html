@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Func(x,y){
+        this.x = x;
+        this.y = y;
+    }
+
+    Func.prototype.getTest = function(){
+        return this.x * this.y;
+    };
+    // Свойство прототпа, будет доступно всем экземплярам
+    Func.prototype.name = "RECTANGLE";
+
+    var res = new Func(10,99);
+    document.write(res.getTest());
+
+    // При попытке смены значения, которое было унаследовано от прототипа,
+    // в объекте будет создана копия свойства (свойство прототипа не изменится).
+    // Значение в прототипе может быть измененно только черзе операцию
+
+    document.write("<br/>" + res.name);
+    document.write("<br/>" + Func.prototype.name);
+    res.name = "first rectangle";
+    document.write("<br/>" + res.name);
+    document.write("<br/>" + Func.prototype.name);
+
+
+
+</script>
+</html>

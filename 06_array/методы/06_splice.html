@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>splice</title>
+    <script>
+        var arr = [1,2,3,4,5,6,7];
+        document.write("arr = " + arr);
+        document.write("<br/>arr.splice (1,3) = " + arr.splice(1,3));
+        document.write("<br/>arr = " + arr);
+
+        // splice (начальный индекс = 1, сколько элементов удалить = 0,
+        arr.splice(1, 0, 111, 222, 444);
+        document.write("<br/>arr.splice(1, 0, 111,222,444) = " + arr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+<!--
+
+            Метод splice() - универсальный метод для вставки и удаления элементов из массива.
+            Метод возвращает массив из удаленных элементов.
+            arrayObj.splice( start, deleteCount, [elem1[, elem2[, ...[, elemN]]]] )
+            start - Индекс в массиве, с которого начинать удаление.
+            deleteCount - Кол-во элементов, которое требуется удалить, начиная с индекса start.
+            elem1, elem2, ..., elemN - Добавляемые элементы в массив.
+             Добавление начинается с позиции start.
+
+-->

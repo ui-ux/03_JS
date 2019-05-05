@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object string</title>
+    <script>
+        var string = new String("test object string");
+        string.test2 = "test 2";
+
+        var string1 = "var string ";
+
+        function Func(str){
+            document.write(str + "<br/>")
+        }
+        Func(string);
+        Func(string1);
+        Func(string.test2);
+
+
+        document.writeln("<br/>");
+        document.writeln(string);
+
+        document.writeln("<br/>");
+        document.writeln(string.test2);
+
+        document.writeln("<br/>");
+        document.writeln(string1);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

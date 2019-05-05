@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+    <script>
+        window.onload = function(){
+            setTimeout(Func,5000);
+
+            function Func(){
+                var e = document.getElementById("main");
+                e.innerHTML = " test end test"
+            }
+
+
+            // второй вариант запуска
+            //setTimeout(function () {
+            //    alert("Hello world");
+            //}, 5000);
+        };
+
+    </script>
+</head>
+<body>
+    <div id = "main">
+        Test
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Наследование</title>
+</head>
+<body>
+
+</body>
+    <script>
+        function Animals(name){
+            this.name = name;
+            this.foods = function(){
+                this.fds = prompt("Enter food", "meat");
+                document.write("this.name 1 = " + this.name + "<br/>this.fsd = " + this.fds);
+
+            }
+        }
+        var animals = new Animals("Dgek");
+        animals.foods();
+        document.write("<br/>");
+        document.write("<br/>");
+        function Cat(name){
+            this.propcat = function(){
+                this.name = name;
+                this.color = "red";
+                document.write("<br/> cats.color = " + cats.color + "<br/>");
+                //document.write("<br/> cats.name = " + cats.name + "<br/>");
+            }
+        }
+
+        Cat.prototype = animals;
+
+        var cats = new Cat("Myrchik");
+        cats.propcat();
+        cats.foods();
+
+    </script>
+</html>

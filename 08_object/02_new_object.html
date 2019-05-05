@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new object</title>
+    <script>
+        var point = new Object();
+        point.x = 10;
+        point.q = 25;
+        point.gt = "text_text";
+        point.y = "<br/>text 10";
+        point.f = function(){
+            document.write("<br/>" + point.x + point.y)
+        };
+
+        point.k = new Object();
+        point.k.l = "test_1";
+        point.k.h = "test_2";
+
+
+        document.write("<br/>point.k.l. = " + point.k.l);
+
+
+        document.write("<br/>point.q = " + point.q);
+        point.q = 35;
+        document.write("<br/>point.q = " + point.q);
+        point.f();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Incup</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Инкапсуляция - сокрытие и релаизация данных объекта.
+
+    var MyClass = function(){
+        var prM = function(){
+            document.write("Закрытый метод <br />");
+        };
+        this.pbM = function(){
+            document.write("Открытый метод <br />");
+        };
+
+        prM();
+
+    };
+
+    var obj = new MyClass();
+
+    obj.pbM();
+    obj.prM(); // !!!
+</script>
+</html>

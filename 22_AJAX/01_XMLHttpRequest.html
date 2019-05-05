@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest синхронный запрос</title>
+    <script>
+        window.onload = function () {
+
+            document.getElementById("btnGet").onclick = function () {
+
+                var xhr = new XMLHttpRequest();
+                // Создание объекта для HTTP запроса.
+
+                xhr.open("GET", "http://jsonplaceholder.typicode.com/posts", false);
+                // Настройка объекта для отправки синхронного GET запроса
+
+                xhr.send();
+                // Отправка запроса, так как запрос является синхронным,
+
+                document.getElementById("output").innerHTML = xhr.responseText;
+                // responseText - текст ответа полученного с сервера.
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btnGet" type="button" value="Get Info" />
+<p id="output"></p>
+</body>
+</html>

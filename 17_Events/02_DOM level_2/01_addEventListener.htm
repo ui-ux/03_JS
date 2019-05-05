@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Установка обработчика DOM Level 2</title>
+    <script>
+        window.onload = function () {
+
+            // addEventListener(событие, обработичк, нужен_перехват_события)
+
+            var btn1 = document.getElementById("button1");
+
+            if (btn1.addEventListener)// проверка поддержки DOM Level 2
+            {
+                // Установка обработичка на событие click для кнопки с id button1
+                btn1.addEventListener("click",
+                                     function () {
+                                         alert("Обработчик события нажатия кнопки");
+                                     },
+                                     false);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="button1" type="button" value="Кнопка" />
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Human(x,y){
+        // свойства экземпляра
+        this.x = x;
+        this.y = y;
+        // метод экземпляра
+        this.print = function () {
+            document.write("(" + this.x + ", " + this.y + ")<br />");
+        };
+    }
+
+    // свойство функции конструктора (аналог статических свойств).
+    Human.prop = "test_prop";
+
+    // Метод функции-конструктора (аналог статическгого метода).
+    Human.testFunc = function(){
+        return new Human(12,36);
+        // this использовать недопустимо.
+    };
+
+    // работа с свойством и методом функции-конструктора.
+    document.write(Human.prop);
+    document.write("<br/>");
+
+    Human.testFunc().print();
+    document.write("<br/>");
+
+</script>
+</html>
