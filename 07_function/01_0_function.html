@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script>
+        let name;
+        let sName;
+        let repeater;
+        
+        function myF(){
+            name = prompt("enter", "name");
+            sName = prompt("enter", "sName");
+        }
+        
+        function myFunc(){
+            console.log("enter name = " + name);
+            console.log("enter sName = " + sName);
+        }
+        myF();
+        myFunc();
+
+        do {
+            myF();
+            myFunc();
+            repeater = confirm("fill in again?");
+        } while (repeater);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

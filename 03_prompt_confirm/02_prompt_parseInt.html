@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt parseInt</title>
+    <script>
+        let x = prompt("Input x value ", "10"); // х - type string
+        let y = prompt("Input y value ", "10"); // y - type string
+        let result = x + y;
+        console.log(result);
+        
+        // Convert string value to numeric:
+        // parseFloat() conversion to real value.
+        // parseInt() conversion to integer value.
+        // These functions return the value NaN if the conversion failed.
+        
+        let integerX = parseInt(x);
+        let integerY = parseInt(y);
+        
+        result = integerX + integerY;
+        console.log(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -8,12 +8,14 @@
     <p id="demo"></p>
 </body>
 <script>
-    var cars = ["BMW", "Volvo", "Saab", "Ford","WV"];
-    var text = "";
-    var i;
+    let cars = ["BMW", "Volvo", "Saab", "Ford","WV"];
+    let text = "";
+    let i;
+    
     for (i = 0; i < cars.length; i++) {
         text += cars[i] + "<br>";
     }
+    
     document.getElementById("demo").innerHTML = text;
 </script>
 

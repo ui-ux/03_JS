@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script>
+        let boxName;
+        let boxSName;
+        window.onload = function() {
+            document.getElementById("name").onclick = getName;
+            document.getElementById("sName").onclick = getSName;
+            boxName = document.getElementById("nameButton");
+            boxSName = document.getElementById("sNameButton");
+            getSName();
+        };
+        
+        function getName() {
+            boxName.style.display ='none';
+            boxSName.style.display = 'block';
+            console.log(boxName);
+        }
+        
+        function getSName() {
+            boxName.style.display = 'block';
+            boxSName.style.display = 'none';
+            console.log(boxSName);
+        }
+       
+        
+    </script>
+</head>
+<body>
+<div>
+    <div id="nameButton">
+        <label>
+            <input type="text">
+        </label>
+        <button onclick="getName()" id="name">
+            next
+        </button>
+    </div>
+    <div id="sNameButton">
+        <label>
+            <input type="text">
+        </label>
+        <button onclick="getSName()"  id="sName">
+            submit
+        </button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3bd4eb1-141d-4e1f-90f8-a08b87682452" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../00_base/0_1_0_variable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../00_base/0_1_1_variable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../00_base/0_2_arithmetic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_number/00_number.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_number/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02_string/01_string.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_prompt_confirm/00_alert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_prompt_confirm/02_prompt_parseInt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_prompt_confirm/03_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05_опереторы/00_if.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05_опереторы/02_if_else.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05_опереторы/03_if_else_if_else.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05_опереторы/04_switch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05_опереторы/05_0_Ternary_operator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05_опереторы/05_1_Ternary_operator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_0_function.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_1_function.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_0_func_ arguments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_1_func_ arguments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_recursion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_factorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.03_JS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.03_JS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00_base/00_base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00_base/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../00_base/0_0_Types.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_string/01_string.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_prompt_confirm/01_prompt_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../03_prompt_confirm/01_prompt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04_DATA/01_DATA.html" beforeDir="false" afterPath="$PROJECT_DIR$/../04_DATA/01_DATA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/01_if.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_опереторы/01_if_prompt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/02_else.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/03_if_else.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/04_1_switch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/04_2_switch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/05_Тернарный.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/06_1_while.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_опереторы/06_1_while.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/06_2_while_ex.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_опереторы/06_2_while_ex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/07_do_while.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_опереторы/07_do_while.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/08_for_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_опереторы/08_for_01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05_опереторы/09_for_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_опереторы/09_for_02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/01_array.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/01_array.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/02_array_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/02_array_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/03_array-as.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/03_array-as.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/010_shift.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/010_shift.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/011_unshift.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/011_unshift.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/01_join.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/01_join.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/02_join_ul_li_.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/02_join_ul_li_.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/03_concat.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/03_concat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/04_reverse.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/04_reverse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/05_slice.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/05_slice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/06_splice.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/06_splice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/07_sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/07_sort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/08_push.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/08_push.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_array/методы/09_pop.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/методы/09_pop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_function.html" beforeDir="false" afterPath="$PROJECT_DIR$/00_function.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_func_ arguments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_return.html" beforeDir="false" afterPath="$PROJECT_DIR$/03_return.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_literal.html" beforeDir="false" afterPath="$PROJECT_DIR$/06_literal.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1WDkXJbDaoSy3Er9TpHDIwZuBOb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3bd4eb1-141d-4e1f-90f8-a08b87682452" name="Default Changelist" comment="" />
+      <created>1578691591336</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578691591336</updated>
+      <workItem from="1578691593698" duration="77000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+</project>

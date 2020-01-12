@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>variable</title>
+    <script>
+        let global = "Global variable";
+
+        function f() {
+            let local = "Local variable";
+
+            console.log(global);
+            console.log(local);
+        }
+
+
+        f();
+
+        console.log(global);
+
+        // ERROR: Attempting to access a local variable from outside the body of the function f ().
+        console.log(local);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

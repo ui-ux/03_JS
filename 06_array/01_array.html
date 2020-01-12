@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <title>array</title>
     <script>
-        var a = [1,2,3,4,5,6,7,8,12];
-        document.write("Значение єлемента массива по индексу 0 = " + a[0]);
-        document.write("</br> Длинна массива = " + a.length);
-        document.write("</br> Значение последнего єлемента массива = " + a[a.length-1]);
+        let a = [1,2,3,4,5,6,7,8,12];
+        console.log("Array element value by index 0 = " + a[0]);
+        console.log("Array length = " + a.length);
+        console.log("The value of the last element of the array = " + a[a.length-1]);
         a[12]=125;
-        document.write("</br> Значение єлемента массива по индексу 12 = " + a[12]);
+        console.log("Array element value by index 12 = " + a[12]);
 
-        var empty =[]; //пустой массив
+        let empty =[]; //пустой массив
 
-        var points =[{x:0,y:0},{x:1,y:1}]; // массив с двумя элементами, каждый элемент это обьект
-        var data ={ train1:[[1,2],[3,4]],
+        let points =[{x:0,y:0},{x:1,y:1}]; // an array with two elements, each element is an object
+        let data ={ train1:[[1,2],[3,4]],
                     train2:[[5,6],[7,8]]
-        };                                  // обьект с двумя свойствами
-                                            // значение каждого свойства єто массив
-                                            // элементами массива являются массивы
+        };                                  // object with two properties
+                                            // the value of each property is an array
+                                            // array elements are arrays
 
     </script>
 </head>

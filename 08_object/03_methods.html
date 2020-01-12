@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <title>methods</title>
     <script>
-        var test = {
+        var person = {
             name: "NAME",
             sname: "SNAME",
             fname: "FNAME",
             good: function(){
-                document.write("good: function(){} = " + this.name);
-                document.write("<br/>good: function(){} = " + this.sname);
+                console.log("person.name = " + person.name);
+                console.log("this.sname = " + this.sname);
+            },
+
+            add: function(fname){
+                console.log("this.fname = " + this.fname);
+                this.fname = fname;
+                console.log("this.fname = " + this.fname);
             }
         };
-        test.good();
-
-
-        for(elem in test){
-            document.write(test[elem]);
-        }
+        person.good();
+        person.add('f_name');
 
     </script>
 

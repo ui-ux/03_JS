@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+    <script>
+        let a = "hello";
+        let b = "World";
+        let c = a + ' ' + b;
+        console.log('c =  a + b = ' + c); //concatenation of value
+        let d = 22;
+        let f = a + d;
+        console.log('f = a + d = ' + f);
+        let g = 22;
+        let j = 33;
+        let h = g + j;
+        console.log('h = g + j = ' + h);
+        let j1 = '33';
+        let h1 = g + j1;
+        console.log('h1 = g + j1 = ' + h1);
+        
+        console.log('g * j1 = ' + g * j1);
+        
+        //console.log('g - j1 = ' + g - j1);// NaN
+        console.log('j1 - g = ' + (j1 - g));
+        console.log('j1 + g = ' + j1 + g);
+        
+        console.log('g / j1 = ' + g / j1);
+        let h2 = j1 + g;
+        console.log('h2 = j1 + g = ' + h2);
+        let h3 = +j1 + g;
+        console.log('h3 = +j1 + g = ' + h3);
+        
+        console.log(c);
+        console.log("first character in a string _ " + c.charAt(0));
+        console.log("last character in a string _ " + c.charAt(c.length-1));
+        console.log("last character in a string  _  "  + c[c.length-1]);
+        console.log("2nd 3rd 4th characters _ "  + c.slice(1,4));
+        console.log("position of the first character r _ "  + c.indexOf("r"));
+        console.log("last character position l _ "  + c.lastIndexOf("l"));
+        console.log("parsed into substrings "  + c.split(" "));
+        console.log("replaces all occurrences of a substring "  + c.replace("l","L"));
+        console.log("Upper "  + a.toUpperCase());
+        console.log("character by index [0] _ "  + c[0]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

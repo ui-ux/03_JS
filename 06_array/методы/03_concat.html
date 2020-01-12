@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <title>concat</title>
     <script>
+/*         
+    concat () - complements the elements of the array with the given elements in the parameters
+*/
+        
         window.onload = function(){
-            var arr =[1,2,3,4,5,6,7,8];
-            var arr1 =["test1", "test2"];
-            var arr3 = arr.concat(arr1);
-            //document.write(arr3);
+            let arr = [1,2,3,4,5,6,7,8];
+            let arr1 = ["test1", "test2"];
+            let arr3 = arr.concat(arr1);
+            console.log(arr3);
             document.getElementById("div").innerHTML = arr3;
+
+            let arr4 = [1,2,3,4,5,6,7,8, ...arr3];
+            console.log(arr4);
+
+
+            let b = [1, 2, 3];
+
+            let input = prompt("Enter a new array element:", "");
+
+            while (input != null) {
+                b = b.concat(input);
+                input = prompt("Enter a new array element:", "");
+            }
+
+            console.log(b.join(","));
         };
     </script>
 </head>
 <body>
     <div id="div"></div>
 </body>
-
-
 </html>

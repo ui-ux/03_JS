@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>variable</title>
+    <script>
+        let global = "Global variable";
+
+        function f() {
+            let global = "Local variable";
+
+            console.log(global);
+        }
+        
+        f();
+        console.log(global);
+        
+        for(let c = 0; c < 10; c++){
+            console.log(c);
+            var cc = 99;
+            let ccc = 999;
+        }
+
+        console.log(cc);
+        console.log(ccc);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

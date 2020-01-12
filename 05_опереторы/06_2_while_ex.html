@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <title>while</title>
     <script>
-        var str = "Угадайте задуманный цвет с пяти попыток.";
+        let str = "Guess the intended color with five attempts.";
 
-        var maxAttempt = 5;   // Допустимое количество попыток.
-        var attempt = 0;      // Счетчик попыток.
-        var color = "red";    // Задуманный цвет.
+        let maxAttempt = 5;   // Allowed number of attempts
+        let attempt = 0;      // Attempt Counter
+        let color = "red";    // Color
+
+        let valueColor;
 
         while (attempt < maxAttempt) {
             attempt++;
 
-            value = prompt(str + " Попытка " + attempt, "");
+            valueColor = prompt(str + "Attempt" + attempt, "");
 
-            if (value == null) {
+            if (valueColor == null) {
                 break;
             }
 
-            if (value != color) {
-                str = "Вы не угадали.";
+            if (valueColor !== color) {
+                str = "You did not guess";
+                console.log(str);
                 continue;
             }
 
-            document.write("<p>Поздравляем, Вы угадали с " + attempt + " попытки!");
+            console.log("Congratulations, you guessed right with " + attempt + " attempt");
             break;
         }
 
-        document.write("<p>Конец игры!");
+        console.log("End");
     </script>
 </head>
 <body>

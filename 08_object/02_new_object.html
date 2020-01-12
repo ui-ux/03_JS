@@ -1,33 +1,49 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>new object</title>
     <script>
-        var point = new Object();
+        let point = new Object();
         point.x = 10;
         point.q = 25;
-        point.gt = "text_text";
-        point.y = "<br/>text 10";
-        point.f = function(){
-            document.write("<br/>" + point.x + point.y)
+        point.y = "text";
+        point.f = function () {
+            console.log(point.x + point.q)
         };
+        console.log("q = " + point.q);
+        point.f();
 
         point.k = new Object();
         point.k.l = "test_1";
         point.k.h = "test_2";
+        console.log("point.k.l. = " + point.k.l);      
 
+        // Or
+        let human = {
+            firstName: "Alex",
+            secondName: "Jazun",
+            age: 27,
 
-        document.write("<br/>point.k.l. = " + point.k.l);
+            person: function() {
+                console.log('method - function literal')
+            },
 
-
-        document.write("<br/>point.q = " + point.q);
-        point.q = 35;
-        document.write("<br/>point.q = " + point.q);
-        point.f();
+        
+            occupation: {
+                company: "HKJGK",
+                position: "developer"
+            }
+        };
+        human.person();
+        console.log(human.firstName);
+        console.log(human.occupation.company) 
     </script>
 </head>
+
 <body>
 
 </body>
+
 </html>

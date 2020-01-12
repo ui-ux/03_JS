@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Types</title>
+    <script>
+        /*Elementary Types*/
+
+        var a = 10; /*type number*/
+        console.log(a);
+        console.log("typeof a - " + typeof a);
+
+        var s = "text"; /*type sting*/
+        console.log(s);
+        console.log("typeof s - " + typeof s);
+
+        var d = true; /*type boolean*/
+        console.log(d);
+        console.log("typeof d - " + typeof d);
+
+
+        /*Trivial Types*/
+        var f = null; /*type null*/
+        // Null is a data type indicating the absence of an object.
+        console.log(f);
+        console.log("typeof f - " + typeof f);
+
+        var g = undefined; /*type undefined*/
+        console.log(g);
+        console.log("typeof g - " + typeof g);
+
+
+        /*Compound Types*/
+
+        var j = new Date();
+        console.log(j); /*type Object*/
+        console.log("typeof j - " + typeof j);
+
+        var k = [1,2,3,4,'name']; // Array
+        console.log(k); /*type Object*/
+        console.log("typeof k - " + typeof k);
+
+
+        /*Special Type*/
+
+        var z = function () {
+            return 'f-n text'
+        };
+        console.log(z()); /*type Object*/
+        /* console.log(z); */
+        console.log("typeof z() - " + typeof z);
+
+
+        // Assignment Operator "="; "!="; "!=="
+        let aa = 99;
+        let bb = '99';
+        let cc = (aa == bb);
+        console.log('cc == ' + cc);
+        let vv = (aa === bb);
+        console.log('vv === ' + vv);
+
+        let aaa = 'text';
+        let bbb = "text";
+        let ccc = (aaa == bbb);
+        console.log('ccc == '+ ccc);
+        let vvv = (aaa === bbb);
+        console.log('vvv === ' + vvv);
+
+
+        let a_b_1 = 1;
+        let a_b_2 = true;
+        let a_b_12 = (a_b_1 == a_b_2);
+        console.log('a_b_12 == ' + a_b_12);
+
+        let vv_12 = (a_b_1 === a_b_2);
+        console.log('vv_12 === ' + vv_12);
+
+
+        let a_b_c = null;
+        let a_b_d = undefined;
+        let a_b_c_d = (a_b_c == a_b_d);
+        console.log('a_b_c_d  == ' + a_b_c_d );
+
+        let a_b_c_de = (a_b_c === a_b_d);
+        console.log('a_b_c_d  === ' + a_b_c_de );
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

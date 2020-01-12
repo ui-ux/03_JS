@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>literal</title>
+    <script>
+        let f = function(){
+            console.log("function - literal");
+        };
+        
+        f();
+
+
+        sayHi("Name");
+
+        function sayHi(name) {
+            console.log( "Hello, " + name );
+        }
+
+        sayHi2("Name"); // error!
+
+        var sayHi2 = function(name) {
+            console.log( "Hello, " + name );
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
