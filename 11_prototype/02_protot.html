@@ -16,15 +16,17 @@
     Func.prototype.getTest = function(){
         return this.x * this.y;
     };
+
     Func.prototype.getTest2 = function(){
-        document.write(this.x + this.y);
+        console.log(this.x + this.y);
     };
 
-    var res = new Func(10,99);
-    document.write(res.getTest());
-    document.write("<br/>");
+    let res = new Func(10,99);
 
+    console.log(res.getTest());
     res.getTest2();
+
+    console.log(Func.prototype)
 
 
 

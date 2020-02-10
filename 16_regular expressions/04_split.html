@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>split</title>
+    <script>
+        // split() - splits a string into an array of substrings according to a regular expression
+        var text = "test-А123test-B123test-C111test-D567";
+        var res = text.split(/\d\d\d/g);
+        // returns an array ['test-A', 'test-B', 'test-C', 'test-D']
+        console.log(res);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unobtrusive change of image</title>
+    <script>
+
+        window.onload = function () {
+            addRollover("btn", "img/button-hover.jpg");
+        }
+
+        function addRollover(id, path) {
+            var e = document.getElementById(id);
+
+            // if the element is not img skipped, end the function
+            if (e.tagName.toLowerCase() != "img") return;
+
+            (new Image()).src = path;
+            var basePath = e.src;
+
+            e.addEventListener("mouseover", function () { this.src = path; })
+            e.addEventListener("mouseout", function () { this.src = basePath; })
+        }
+
+    </script>
+</head>
+<body>
+    <img id="btn" src="img/button.jpg" />
+</body>
+</html>

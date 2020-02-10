@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Level 2</title>
+    <script>
+
+        window.addEventListener("load", uploadDocument , false);
+
+        function uploadDocument() {
+
+            let guard = document.getElementById("guard");
+
+            guard.addEventListener("keypress", checkingМalues, true);
+
+            function checkingМalues (e) {
+
+                if (String.fromCharCode(e.charCode) != '1'
+                    && String.fromCharCode(e.charCode) != '2') {
+                    // if the pressed button is not 0 or 1 cancel the default action
+                    e.preventDefault();
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="guard">
+        <input type="text" value="" />
+        <input type="text" value="" />
+    </div>
+</body>
+</html>

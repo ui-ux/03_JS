@@ -8,29 +8,51 @@
 
 </body>
 <script>
+
     function Func(x,y){
         this.x = x;
         this.y = y;
+       
     }
+
+    // The prototype property will be available to all instances.
+    Func.prototype.name = "first";
+    console.log(Func.prototype);
+    console.log(Func.prototype.name);
+
 
     Func.prototype.getTest = function(){
         return this.x * this.y;
     };
-    // Свойство прототпа, будет доступно всем экземплярам
-    Func.prototype.name = "RECTANGLE";
 
-    var res = new Func(10,99);
-    document.write(res.getTest());
 
-    // При попытке смены значения, которое было унаследовано от прототипа,
-    // в объекте будет создана копия свойства (свойство прототипа не изменится).
-    // Значение в прототипе может быть измененно только черзе операцию
+    let res = new Func(10,5);
+    console.log(res.getTest());
 
-    document.write("<br/>" + res.name);
-    document.write("<br/>" + Func.prototype.name);
-    res.name = "first rectangle";
-    document.write("<br/>" + res.name);
-    document.write("<br/>" + Func.prototype.name);
+    let res2 = new Func(1,5);
+    console.log(res.getTest());
+
+    // If you try to change the value that was inherited from the prototype, a copy of the property will be created in the object (the prototype property will not change).
+    // The value in the prototype can only be changed through the operation
+    // Func.prototype.name
+
+    console.log(res.name);
+    console.log(Func.prototype);
+    
+    res.name = "last";
+    console.log(res.name);
+    console.log(Func.prototype);
+
+    Func.prototype.name = "last";
+    console.log(res.name);
+    console.log(Func.prototype);
+
+
+    console.log(Func.prototype.constructor);
+    let currentDate = new Date();
+    console.log(currentDate);
+    console.log(currentDate.constructor);
+
 
 
 

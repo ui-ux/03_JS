@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval</title>
+    <script>
+        window.onload = function (){
+            let a = 0;
+            let p = document.getElementById("main");
+            
+            function Func(){
+                a++;
+                p.innerHTML = a;
+            }
+
+            setInterval(Func,2000);
+        }
+    </script>
+</head>
+<body>
+    <p id = "main">
+        start
+    </p>
+</body>
+</html>

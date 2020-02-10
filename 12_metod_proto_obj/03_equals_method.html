@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Rectangle(w, h) {
+        this.width = w;
+        this.height = h;
+    }
+
+    Rectangle.prototype.getArea = function () {
+        return this.width * this.height;
+    }
+
+    // toString of Object
+    Rectangle.prototype.toString = function () {
+        return "Прямоугольник W:" + this.width + " H:" + this.height;
+    }
+
+    // valueOf of Object
+    Rectangle.prototype.valueOf = function () {
+        return this.getArea();
+    }
+
+    // objects have the same value
+    var rect1 = new Rectangle(100, 200);
+    var rect2 = new Rectangle(100, 200);
+
+    // comparison operator checks the equality of links and not the equality of values of properties of objects
+    var res = rect1 == rect2;
+    console.log("rect1 == rect2 -> " + res);
+
+    var rect3 = rect1; // rect1 and rect3 links to the same object in memory
+    res = rect3 == rect1;
+    console.log("rect3 == rect1 -> " + res);
+</script>
+</html>

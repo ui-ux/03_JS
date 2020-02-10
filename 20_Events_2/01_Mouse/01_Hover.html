@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse</title>
+    <script>
+
+        window.onload = function () {
+            var p = document.getElementsByTagName("p")[0];
+
+            // the cursor is within the element
+            p.onmouseover = function () {
+                this.style.backgroundColor = "green";
+            };
+
+            // the cursor went beyond the element
+            p.onmouseout = function () {
+                this.style.backgroundColor = "yellow";
+            }
+        }
+
+    </script>
+
+    <style>
+        p {
+            background-color:red;
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

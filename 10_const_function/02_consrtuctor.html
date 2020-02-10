@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    // Constructor Function for Creating Human Objects
+    function Human(x,y) {
+        // свойство
+        this.firstName = x;
+        this.lastName = y;
+
+        // instance function (method) - property of an object that contains a value as a function
+        this.sayHello = function () {
+            console.log("Hello! My name is " + this.firstName + " " + this.lastName);
+        };
+
+        // instance function (method)
+        this.getArea = function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    // Creating instance of type Human
+    let h = new Human("Homer","Simpson");
+    let h2 = new Human("Homer 2","Simpson 2");
+
+    // Call sayHello () method on created objects
+    h.sayHello();
+    console.log(h2.getArea());
+
+</script>
+</html>

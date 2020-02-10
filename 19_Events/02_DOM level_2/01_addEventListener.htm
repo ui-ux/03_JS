@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handler Installation DOM Level 2</title>
+    <script>
+        window.onload = function () {
+
+            // addEventListener(event, handler, need interception event)
+
+            let btn1 = document.getElementById("button1");
+
+            if (btn1.addEventListener)// support check DOM Level 2
+            {
+                // Setting a handler for the click event for a button with id button1
+                btn1.addEventListener("click", addTest, false);
+            };
+
+            function addTest(){
+                console.log('add test')
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="button1" type="button" value="button" />
+</body>
+</html>

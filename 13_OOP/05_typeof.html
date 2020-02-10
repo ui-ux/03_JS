@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeof</title>
+</head>
+<body>
+
+</body>
+    <script type="text/javascript">
+
+        function printMessage(message) {
+            if (typeof message != "string") {
+                console.log("The parameter must be a string type!");
+            }
+            else {
+                console.log(message);
+            }
+        }
+
+        printMessage(new Array());
+        printMessage("Hello world");
+
+    </script>
+</html>

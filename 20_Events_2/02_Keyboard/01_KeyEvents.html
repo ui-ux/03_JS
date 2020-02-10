@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onkey</title>
+    <script>
+        window.onload = function () {
+            var main = document.getElementById("main");
+
+            main.onkeydown = function () {
+                print("onkeydown event");
+            };
+
+            main.onkeyup = function () {
+                print("onkeyup event");
+            };
+
+            main.onkeypress = function () {
+                print("onkeypress event");
+            };
+
+            function print(message) {
+                document.getElementById("output").innerHTML += message + "<br />";
+            }
+        }
+    </script>
+</head>
+<body id="main">
+    <p id="output"></p>
+</body>
+</html>

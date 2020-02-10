@@ -2,29 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Incup</title>
+    <title>Encapsulation</title>
 </head>
 <body>
 
 </body>
 <script>
-    // Инкапсуляция - сокрытие и релаизация данных объекта.
+    // Encapsulation - hiding and implementing object data
 
-    var MyClass = function(){
-        var prM = function(){
-            document.write("Закрытый метод <br />");
-        };
-        this.pbM = function(){
-            document.write("Открытый метод <br />");
+    function MyClass(){
+        var privateM = function(){
+            console.log("Private method")
+        }
+
+        this.publicM = function(){
+            console.log("Public method")
         };
 
-        prM();
+        privateM();
 
     };
 
-    var obj = new MyClass();
+    let obj = new MyClass();
 
-    obj.pbM();
-    obj.prM(); // !!!
+    obj.publicM();
+    obj.privateM (); // !!!
 </script>
 </html>

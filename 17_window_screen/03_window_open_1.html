@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window open</title>
+    <script>
+        window.onload = function () {
+
+            document.getElementById("openButton").onclick = openButtonHandler;
+            document.getElementById("closeButton").onclick = closeButtonHandler;
+
+            var w;
+
+            function openButtonHandler() {
+                 // the first parameter is the html page that will be loaded in a new window.
+                 // second parameter is the window name
+                 // third parameter is a list of additional parameters (optional)
+
+                w = window.open("04_window_open_2.html", "Window Name", "width=400,height=400,status=yes,resizable=no");
+            }
+
+            function closeButtonHandler() {
+                w.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="openButton" value="Открыть" />
+    <input type="button" id="closeButton" value="Закрыть" />
+</body>
+</html>

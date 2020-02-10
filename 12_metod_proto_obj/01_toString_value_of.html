@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toString</title>
+    <script>
+        function Rectangle(w, h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        // overriding the toString method from Object
+        Rectangle.prototype.toString = function () {
+            return "W:" + this.width + " H:" + this.height;
+        };
+
+        Rectangle.prototype.getArea = function () {
+            return  this.width + this.height;
+        };
+
+        var rect1 = new Rectangle(100, 200);
+        var rect2 = new Rectangle(400, 300);
+
+        document.write(rect1 + "<br />"); 
+        console.log(rect1); 
+
+        document.write(rect2.toString() + "<br />");
+        console.log(rect2.toString()); 
+
+
+        Rectangle.prototype.valueOf = function () {
+            return this.getArea();
+        }
+        document.write(rect2.valueOf() + "<br />");
+        console.log(rect2.valueOf()); 
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Point(x,y,z){
+        // instance properties
+        this.x = x;
+        this.y = y;
+        this.z = z;
+
+        // instance method
+        this.sayHello = function(){
+            console.log(this.x + this.y + this.z);
+        };
+    }
+    let bnf = new Point(11,22,44);
+    bnf.sayHello();
+
+
+    let lstr = new Point(10,12.15);
+    lstr.x = 222;
+    lstr.y = 222;
+    console.log(lstr.x + lstr.y);
+
+    // constructor function property (analog of static properties)
+     Point.test = "test point";
+     console.log(Point.test);
+
+     // constructor function method (analog of the static method)
+     Point.getOrigin = function () {
+        console.log('Point.getOrigin')
+        console.log(this.x);
+        return new Point(5,5,5); 
+         // !!!! this use is invalid !!!
+
+     };
+     Point.getOrigin();
+     Point.getOrigin().sayHello();
+     
+</script>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img-s</title>
+    <script>
+
+        window.onload = function () {
+            var img1 = document.getElementById("logoImg");  // id.
+            var img2 = document.images.logo;                // name
+            var img3 = document.images["logo"];             // name
+            var img4 = document.logo;                       // name
+
+            console.log(img1);
+            console.log(img2);
+            console.log(img3);
+            console.log(img4);
+            console.log(img4.name);
+            console.log(document.images);
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <img id="logoImg" name="logo" src="img/Marchisio.jpg" alt="Marchisio" />
+
+    <p id="test1">
+
+    </p>
+</body>
+</html>

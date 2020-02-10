@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <!-- onclick -->
+    <input onclick="clickInput(event)" type="button" name="button1" value="Button1" />
+    <br /><br />
+
+    <!--onclick-->
+    <input type="checkbox" checked="checked" name="checbox1" />heck Box 1
+    <br /><br />
+
+    <!--onchange-->
+    <input type="file" name="file1" value="" />
+    <br />
+
+    <!--Data saved with the form but invisible to the user-->
+    <input type="hidden" name="hidden1" value="" />
+    <br /><br />
+
+    <!--Password field-->
+    <input type="password" name="password1" value=" " />
+    <br />
+
+    <!--toggle-->
+    Radio 1<input type="radio" checked="checked" name="group1" />
+    Radio 2<input type="radio" name="group1" />
+    <br />
+
+    <!--Button clearing form values-->
+    <input type="reset" name="reset1" value="Reset" />
+    <br />
+    <br />
+
+    <!--A list in which one item can be selected-->
+    <select name="select1">
+        <option value="value1">text 1</option>
+        <option value="value2">text 2</option>
+        <option value="value3">text 3</option>
+    </select>
+    <br />
+    <br />
+
+    <!--Multiple choice list-->
+    <select multiple="multiple" name="multipleSelect1">
+        <option value="value">text</option>
+        <option value="value">text</option>
+        <option value="value">text</option>
+    </select>
+    <br />
+    <br />
+
+    <!--Button for transmitting form data-->
+    <input type="submit" name="submit1" value="Submit" />
+    <br />
+
+    <!--Single line input field-->
+    <input type="text" name="text1" value=" " />
+    <br /><br />
+
+    <!--Multi-line input field-->
+    <textarea name="textArea1" rows="4" cols="10"></textarea>
+</form>
+
+<script>
+    function clickInput (event) {
+        console.log(event);
+        console.log(event.toElement);
+        console.log(event.toElement.maxLength);
+        console.log(event.type);
+        console.log(event.defaultPrevented);
+    }
+</script>
+</body>
+</html>

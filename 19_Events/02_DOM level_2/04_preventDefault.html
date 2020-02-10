@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>preventDefault</title>
+    <script>
+        window.addEventListener("load", function () {
+
+            document.forms[0].addEventListener("submit", function (e) {
+                if (document.getElementById("nameInput").value.length == 0)
+                {
+                    // If the input field is empty - cancel the default action that is associated with the event
+                    e.preventDefault();
+                    alert("enter name!");
+                }
+            }, false);
+
+        }, false);
+    </script>
+</head>
+<body>
+    <form action="/test.html" method="post">
+        Name <input id="nameInput" type="text" name="name"/>
+        <input type="submit" value="Отправить" />
+    </form>
+</body>
+</html>

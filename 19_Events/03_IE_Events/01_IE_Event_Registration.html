@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE <= 9 IE</title>
+    <script>
+        window.attachEvent("onload", function () {
+            var e = document.getElementById("btn");
+            var eRemove = document.getElementById("btnRemove");
+
+// set the handler for the click event
+             // In the IE model, there is no concept of event capture, but there is a concept of popup.
+             // in order to stop the spread when popup e.cancelBubble = true is used
+            e.attachEvent("onclick", handler);
+            eRemove.attachEvent("onclick", function () {
+                // delete handler
+                e.detachEvent("onclick", handler);
+            });
+
+            function handler() {
+                alert("Обработчик события");
+            }
+        });
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="Кнопка" />
+    <input id="btnRemove" type="button" value="Удалить обработчик" />
+</body>
+</html>

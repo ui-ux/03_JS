@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Пространство имен</title>
+    <title>Namespace</title>
     <script>
         var Module1 = {};
         Module1.name = "MODULE 1";
         Module1.startModule1 = function () {
-            document.write(Module1.name + "<br />");
+            console.log(Module1.name);
         };
 
         var Module2 = {};
         Module2.name = "MODULE 2";
-        Module2.startModule2 = function() {
-            document.write(Module2.name + "<br />");
+        Module2.startModule1 = function() {
+            console.log(Module2.name);
         };
 
         Module1.startModule1();
-        Module2.startModule2();
+        Module2.startModule1();
     </script>
 </head>
 <body>

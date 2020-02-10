@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Работа с HTML формой</title>
+    <script>
+        window.onload = function () {
+            // getting a form by name
+            var f = document.myform; 
+
+            // getting items by name
+            f.fName.value = "text";
+            f.lName.value = "text";
+            f.age.value = "text";
+            console.log(f);
+            console.log(f.fName.value);
+            console.log(f.age.name);
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        Имя <input type="text" value=" " name="fName" /><br />
+        Фамилия<input type="text" value=" " name="lName" /><br />
+        Возраст<input type="text" value=" " name="age" /><br />
+        <input type="button" value="Регистрация" />
+    </form>
+</body>
+</html>

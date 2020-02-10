@@ -6,17 +6,17 @@
     <script type="text/javascript">
         function selectFirstChild() {
             var list = document.getElementById("list");
-            // Получение первого дочернего элемента в списке.
+            // Getting the first child in a list
             var child = list.firstChild;
             if (child != null) {
-                // добавление атрибута style="color:red" для выбранного элемента.
+                // adding the style = "color: red" attribute for the selected item
                 child.setAttribute("style", "color:red;");
             }
         }
 
         function selectLastChild() {
             var list = document.getElementById("list");
-            // Получение последнего дочернего элемента в списке.
+            // Getting the last child in a list
             var child = list.lastChild;
             if (child != null) {
                 child.setAttribute("style", "color:red;");
@@ -33,7 +33,7 @@
                 node.setAttribute("style", "color:green");
                 return;
             }
-            // Получение следующего элемента, которые в дереве находиться на одном уровне.
+            // Getting the next element that are in the tree at the same level
             node = node.nextSibling;
             if (node != null) {
                 node.setAttribute("style", "color:green");
@@ -48,7 +48,7 @@
                 node.setAttribute("style", "color:green");
                 return;
             }
-            // Получение предыдущего элемента, которые в дереве находиться на одном уровне.
+            // Getting the previous item that are in the tree at the same level
             node = node.previousSibling;
             if (node != null) {
                 node.setAttribute("style", "color:green");
@@ -64,10 +64,10 @@
 
         function createNewChild() {
             var list = document.getElementById("list");
-            // создание элемента li
+            // create li element
             var item = document.createElement("li");
             item.innerHTML = "NEW ITEM";
-            // добавление созданного элемента в конце.
+            // add the created item at the end
             list.appendChild(item);
         }
 
@@ -75,7 +75,7 @@
             var list = document.getElementById("list");
             var item = list.lastChild;
             if (item != null) {
-                // удаление выбранного элемента из дерева.
+                // delete selected item from tree
                 list.removeChild(item);
             }
         }
@@ -85,7 +85,7 @@
             var item = document.createElement("li");
             item.innerHTML = "NEW ITEM";
             if (list.firstChild != null) {
-                // вставка элемента перед указанным элементом.
+                // insert an element before a given element
                 list.insertBefore(item, list.firstChild);
             }
         }
@@ -94,13 +94,13 @@
 <body>
     <ul id="list"><li>List Item 1</li><li>List Item 2</li><li>List Item 3</li><li>List Item 4</li><li>List Item 5</li></ul>
     <br />
-    <input type="button" onclick="selectFirstChild()" style="width: 210px;" value="Выбрать первый элемент" /><br />
-    <input type="button" onclick="selectLastChild()" style="width: 210px;" value="Выбрать последний элемент" /><br />
-    <input type="button" onclick="selectNextNode()" style="width: 210px;" value="Выбрать следующий элемент" /><br />
-    <input type="button" onclick="selectPrevNode()" style="width: 210px;" value="Выбрать предыдущий элемент" /><br />
-    <input type="button" onclick="createNewChild()" style="width: 210px;" value="Добавить элемент" /><br />
-    <input type="button" onclick="removeLastChild()" style="width: 210px;" value="Удалить элемент" /><br />
-    <input type="button" onclick="createNewChildAtStart()" style="width: 210px;" value="Добавить  в начало" /><br />
+    <input type="button" onclick="selectFirstChild()" style="width: 210px;" value="Select first item" /><br />
+    <input type="button" onclick="selectLastChild()" style="width: 210px;" value="Select last item" /><br />
+    <input type="button" onclick="selectNextNode()" style="width: 210px;" value="Select next item" /><br />
+    <input type="button" onclick="selectPrevNode()" style="width: 210px;" value="Select previous item" /><br />
+    <input type="button" onclick="createNewChild()" style="width: 210px;" value="Add item" /><br />
+    <input type="button" onclick="removeLastChild()" style="width: 210px;" value="Delete item" /><br />
+    <input type="button" onclick="createNewChildAtStart()" style="width: 210px;" value="Add to top" /><br />
 </body>
 </html>
 

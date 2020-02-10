@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image change</title>
+    <script>
+        window.addEventListener("load", function () {
+            var flag;
+            document.getElementById("changeBtn").addEventListener("click", function () {
+                if (flag) {
+                        // change the image, leads to a call to
+                        // server if the image is not uploaded and not cached
+                    document.getElementById("imgBtn").src = "img/button.jpg";
+                }
+                else {
+                    document.getElementById("imgBtn").src = "img/button-hover.jpg";
+                }
+                flag = !flag;
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <img id="imgBtn" src="img/button.jpg" alt="Button" />
+    <button id="changeBtn">Change</button>
+</body>
+</html>

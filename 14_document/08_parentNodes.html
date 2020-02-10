@@ -7,19 +7,17 @@
         window.onload = function(){
             var e = document.getElementById("test2");
             var d = document.getElementById("list");
-
+            console.log(e.parentNode);
             e.parentNode.style.color = "red";
             d.firstChild.style.backgroundColor = "yellow";
-            d.lastChild.style.backgroundColor = "blue";
+            d.lastChild.style.backgroundColor = "grey";
 
 /*
-            // nextSibling - получение следующего узла,
-            // который находиться на одном уровне с текущим
-            // (узлы имеют общий родительский узел)
+            nextSibling - getting the next node that is at the same level as the current
+            (nodes share a parent node)
             e.nextSibling.style.color = "red";
 
-            // previousSibling - получение предыдущего узла,
-            // который находиться на одном уровне с текущим.
+            previousSibling - getting the previous node that is on par with the current
             e.previousSibling.style.color = "green";
 */
         }
@@ -31,14 +29,18 @@
 <body>
 <ul id="list"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>
     <div>
-        <p>test
-            <h3 id="test2">
+        <div>
+            test 1
+            <div>
                 test 2
-            </h3>
-        </p>
-        <p>
-            test 3
-        </p>
+                <div id="test2">
+                    test 3
+                </div>
+            </div>
+        </div>
+        <div>
+            test 4
+        </div>
     </div>
 </body>
 </html>

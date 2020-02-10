@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let person = new Object();
+        person.name =  "Name";
+        person.sname = "Sname";
+        person.funk = function(){
+            return person.name;
+        };
+        person.funk1 = function(f){
+            return person.name;
+        };
+        console.log(person.name);
+        console.log(person.sname);
+        console.log(person.funk());
+    </script>
+</html>

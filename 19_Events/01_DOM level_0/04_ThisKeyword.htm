@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+
+    <script>
+        function loadHandler() {
+            var e = document.getElementById("input1");
+
+            e.onclick = function () {
+                // since this function is the value of the onclick property, 
+                // the this keyword refers to the element that generated the event
+                this.value = "clicked 1";
+            };
+        }
+    </script>
+
+</head>
+<body onload="loadHandler()">
+    <!--The keyword this refers to the element in which the event occurred-->
+    <input type="button" id="input1" value="Click me!" />
+    <input type="button" value="Click me!" onclick="this.value = 'clicked 2'" />
+    
+</body>
+</html>

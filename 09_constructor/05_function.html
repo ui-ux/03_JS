@@ -1,0 +1,28 @@
+<!--
+    The Function constructor allows you to dynamically create and compile anonymous functions.
+     Function constructor accepts an unlimited number of parameters, the last parameter
+     is always the body of the created function, the parameters that are passed at the beginning
+     Function argument list, are the input parameters to the generated function.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object function</title>
+    <script>
+        
+        let func = new Function("x", "y", "return x + y");
+        var res = func(10,10);
+        console.log(res);
+
+        var func2 = new Function("console.log('test')");
+        func2();
+
+        var func3 = new Function("alert('test')");
+        func3();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

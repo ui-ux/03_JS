@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Styles </title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        #first {
+            background-color: green;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var div1 = document.getElementById("first"),
+                    div2 = document.getElementById("second");
+
+            document.getElementById("btn1").onclick = function () {
+                alert("First div style - " + div1.style.backgroundColor);
+            };
+
+            document.getElementById("btn2").onclick = function () {
+                alert("Second div style - " + div2.style.backgroundColor);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="first"></div>
+    <div id="second" style="background-color: red"></div>
+
+    <button id="btn1">Get first styles</button>
+    <button id="btn2">Get second styles</button>
+</body>
+</html>

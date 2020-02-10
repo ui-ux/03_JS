@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigator</title>
+    <script>
+        // The Navigator object supports five properties by which you can get ahead of the browser version
+        // appName - The name of the web browser
+        // appVersion - Version number or other browser information
+        // userAgent - the string that the browser sends in the USER-AGENT HTTP header
+        // appCodeName - The code name of the browser. Netscape uses the code name "Mozilla". For compatibility, IE does the same
+        // platform - The hardware platform on which the browser runs
+
+        let browserInfo = "BROWSER INFORMATION:\n";
+        for (let propname in navigator) {
+            browserInfo += propname + ": " + navigator[propname] + "<br/>" + "\n";
+        }
+        document.write(browserInfo);
+        console.log(browserInfo);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

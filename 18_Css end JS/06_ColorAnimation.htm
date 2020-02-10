@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate color</title>
+</head>
+<body>
+
+    <div id="rect">
+    </div>
+
+    <script type="text/javascript">
+        var e = document.getElementById("rect");
+
+        e.style.width = "100px";
+        e.style.height = "100px";
+        e.style.border = "solid black 5px";
+
+        var colors = ["white", "yellow", "orange", "red"];
+        var nextColor = 0;
+
+        // Call the next function every 500 milliseconds to animate color
+        setInterval(function () {
+            e.style.backgroundColor = colors[nextColor++ % colors.length];
+        }, 500);
+    </script>
+</body>
+</html>

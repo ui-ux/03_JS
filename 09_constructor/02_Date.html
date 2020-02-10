@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let counterYear = 10;
+        let startYear = 2020;
+        let startMonth = 0;
+
+        let daysOfYear = new Array();
+
+        for(var i = 0; i < counterYear; ++i) {
+            daysOfYear.push(startYear = startYear + 1);
+        }
+
+        for(y = 0; y < daysOfYear.length ; y++){
+
+        document.write("year = " + daysOfYear[y] + '<br/>');
+
+            for( d = 0; d < 13; d++) {
+                let dayMonth = 33 - new Date(y, d, 33).getDate();
+                document.write(d + '(id monnth) - ' + dayMonth + ' days in month' + '<br/>');
+            }
+
+        }
+
+        let firstMonth = new Date(2020, 0, 1); // first day of the first month (0-first month)
+        let firstMonthTime = new Date(2020,0,1,17,10,30); //same date в 17:10:30
+        let currentDate = new Date(); // current date
+        let currentYear = currentDate.getFullYear(); // current year
+        let currentMonth = currentDate.getMonth();// current month
+        let currentDay = currentDate.getDate(); // days count starting from one
+        let dayOfWeek = currentDate.getDay(); // day of the week (0 - Sunday).
+        let currentDateAll = currentDate.toLocaleDateString(); // current date _00.00.0000_
+        let currentTime = currentDate.toLocaleTimeString(); // current time
+        let dateDifference = currentDate - firstMonth; // date difference: interval in milliseconds
+
+
+        console.log('firstMonth - ' + firstMonth);
+        console.log('firstMonthTime ' + firstMonthTime);
+        console.log('currentDate ' + currentDate);
+        console.log('currentYear ' + currentYear);
+        console.log('currentMonth (0-first month) ' + currentMonth);
+        console.log('currentDay ' + currentDay);
+        console.log('day of the week (0 - Sunday) ' + dayOfWeek);
+        console.log('current date _00.00.0000_ ' + currentTime);
+        console.log('current time ' + currentDateAll);
+        console.log('date difference: interval in milliseconds ' + dateDifference);
+
+    </script>
+</html>

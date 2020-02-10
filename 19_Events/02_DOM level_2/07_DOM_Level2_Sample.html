@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Level 2</title>
+    <style>
+        #wrapper p {
+            width:100px;
+            height:100px;
+            background-color:green;
+            float:left;
+            margin:10px;
+        }
+    </style>
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            var wrapper = document.getElementById("wrapper");
+
+            // e - the event object that occurred in the wrapper element or in its children
+            wrapper.addEventListener("click", function (e) {
+                // target - the element that triggered the event
+                e.target.style.backgroundColor = "red";
+                console.log(e);
+                console.log(e.toElement);
+            }, false);
+
+        }, false);
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <p></p>
+        <p></p>
+        <p id="1"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

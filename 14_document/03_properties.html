@@ -5,37 +5,50 @@
     <title>Properties</title>
 </head>
 <body>
+    <form action="" name="form1">
+        <input type="text" name="myName" value="myName-1">
+        <input type="text" name="myName2" value="myName-2">
+    </form>
+    <form action="" name="form2">
+        <input type="text" name="myName" value="myName-1">
+        <input type="text" name="myName2" value="myName-2">
+    </form>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+    <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
 </body>
     <script>
-        // bgColor - цвет фона документа.
-        document.write("<b>bgColor</b>: " + document.bgColor + "<br />");
 
-        // cookie - свойство позволяет читать и писать куки файлы.
-        document.write("<b>cookie</b>: " + document.cookie + "<br />");
+        // cookie - The property allows you to read and write cookies
+        console.log("cookie " + document.cookie);
 
-        // lastModified - дата последнего изменения документа.
-        document.write("<b>lastModified</b>: " + document.lastModified + "<br />");
+        // lastModified - last modified date of document
+        console.log("lastModified: " + document.lastModified);
 
-        // location - устаревший синоним свойства URL
-        document.write("<b>location</b>: " + document.location + "<br />");
+        // location - deprecated URL property synonym
+        console.log("location: " + document.location);
 
-        // referrer - адрес документа, содержащего ссылку, которая привела на текущую страницу.
-        document.write("<b>referrer</b>: " + document.referrer + "<br />");
+        // referrer - address of the document containing the link that led to the current page
+        console.log("referrer: " + document.referrer);
 
-        // title - содержимое тега title
-        document.write("<b>title</b>: " + document.title + "<br />");
+        // title - title tag content
+        console.log("title: " + document.title);
 
-        // anchors - массив якорей(именованых позицый документа) - тегов <a> c атрибутом name.
-        // document.write("<br /><b>anchors</b>: " + document.anchors[0].name + "<br />");
+        // anchors - an array of anchors (named document positions) - <a> tags with the name attribute
+        // document.write("anchors: " + document.anchors[0].name");
 
-        // forms - массив форм HTML документа.
-        document.write("<br /><b>forms</b>: " + document.forms + "<br />");
+        // forms - array of HTML document forms
+        console.log(document.forms);
+        console.log(document.forms.namedItem);
 
-        // images - массив изображений HTML документа.
-        document.write("<br /><b>images</b>: " + document.images + "<br />");
+        // images - an array of HTML document images
+        console.log(document.images);
 
-        // links - массив ссылок HTML документа.
-        document.write("<br /><b>links</b>: " + document.links + "<br />");
+        // links - array of HTML document links
+        console.log(document.links);
 
     </script>
 </html>

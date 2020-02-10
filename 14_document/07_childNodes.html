@@ -8,11 +8,11 @@
 
             var e = document.getElementById("list");
 
-            // childNodes - получение всех дочерних узлов.
-            for (var i = 0; i < e.childNodes.length; ++i) {
-                var temp = e.childNodes[i];
+            // childNodes - getting all child nodes
+            for (let i = 0; i < e.childNodes.length; ++i) {
+                let temp = e.childNodes[i];
 
-                // если найденный узел не элемент то пропустить его
+                // if the found node is not an element then skip it
                 if (temp.nodeType != 1) {
                     continue;
                 }

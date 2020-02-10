@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stopPropogation()</title>
+
+    <script>
+        var isTunnel = false;
+
+        window.onload = function () {
+            var e1 = document.getElementById("first");
+            var e2 = document.getElementById("second");
+            var e3 = document.getElementById("third");
+
+            e1.addEventListener("click",
+                // e - parameter stores an object with event information
+                function (e) {
+                    
+                    this.style.backgroundColor = "green";
+                    alert("DIV 1");
+                    // termination of the further route of the event
+                    e.stopPropagation();
+                },
+            isTunnel);
+
+            e2.addEventListener("click",
+                function (e) {
+                    this.style.backgroundColor = "yellow";
+                    alert("DIV 2");
+                    e.stopPropagation();
+                },
+            isTunnel);
+
+            e3.addEventListener("click",
+                function (e) {
+                    this.style.backgroundColor = "red";
+                    alert("DIV 3");
+                    e.stopPropagation();
+                },
+            isTunnel);
+        }
+
+    </script>
+
+    <style>
+        div {
+            border: 3px solid gray;
+            padding: 50px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    1
+    <div id="first">
+        2
+        <div id="second">
+            3
+            <div id="third">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

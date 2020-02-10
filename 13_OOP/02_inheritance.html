@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inheritance</title>
+</head>
+<body>
+
+</body>
+    <script>
+        // basic constructor function
+        function Human(name) {
+            this.name = name;
+            this.talk = function () { 
+                console.log("Hello My Name is " + this.name) 
+            }
+        }
+        console.log(Human.prototype);
+
+        // Parent instance
+        var human = new Human("Serg");
+        human.talk();
+
+
+        // derived function constructor
+        function Student(name){
+            this.name = name;
+            this.school = "derived function constructor";
+        }
+        console.log(Student.prototype);
+
+        Student.prototype = human;
+
+        var alex = new Student("Alexander");
+        alex.talk();
+        console.log(alex.school);
+
+    </script>
+</html>
