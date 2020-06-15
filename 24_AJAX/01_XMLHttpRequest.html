@@ -9,16 +9,30 @@
             document.getElementById("btnGet").onclick = function () {
 
                 var xhr = new XMLHttpRequest();
-                // Создание объекта для HTTP запроса.
+                // Creating an object for an HTTP request
 
                 xhr.open("GET", "http://jsonplaceholder.typicode.com/posts", false);
-                // Настройка объекта для отправки синхронного GET запроса
+                // Configure an object to send a synchronous GET request
 
                 xhr.send();
-                // Отправка запроса, так как запрос является синхронным,
+                // Sending a request because the request is synchronous
 
-                document.getElementById("output").innerHTML = xhr.responseText;
-                // responseText - текст ответа полученного с сервера.
+                
+                // responseText - response text received from the server
+
+                var arr = JSON.parse(xhr.responseText);
+                //console.log(arr);
+                
+                let allArr = [];
+                for (var i = 0; i < arr.length; i++){ 
+                    const obj = arr[i];
+                    this.allArr += allArr.push(obj.title);
+                }
+                console.log(allArr);
+
+                let res = allArr.join("<br/>");
+                document.getElementById("output").innerHTML = allArr;
+                document.getElementById("result").innerHTML = res;
             }
         }
     </script>
@@ -26,5 +40,6 @@
 <body>
 <input id="btnGet" type="button" value="Get Info" />
 <p id="output"></p>
+<p id="result"></p>
 </body>
 </html>

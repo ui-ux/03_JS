@@ -13,9 +13,12 @@
             let arr1 = ["test1", "test2"];
             let arr3 = arr.concat(arr1);
             console.log(arr3);
+            let arr31 = [].concat(arr, arr1);
+            console.log(arr31);
+
             document.getElementById("div").innerHTML = arr3;
 
-            let arr4 = [1,2,3,4,5,6,7,8, ...arr3];
+            let arr4 = [...arr, ...arr1];
             console.log(arr4);
 
 

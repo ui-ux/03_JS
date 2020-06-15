@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>XMLHttpRequest синхронный запрос</title>
+    <title>asynchronous request</title>
     <script>
         window.onload = function () {
 
@@ -30,7 +30,9 @@
                     }
                 };
 
-                xhr.send();                              // Отправка запроса, так как запрос асинхронный сценарий продолжит свое выполнение. Когда с сервера придет ответ сработает событие onreadystatechange
+                xhr.send();                              
+                // Отправка запроса, так как запрос асинхронный сценарий продолжит свое выполнение.
+                // Когда с сервера придет ответ сработает событие onreadystatechange
             }
         }
     </script>

@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>XMLHttpRequest синхронный запрос</title>
+    <title>XMLHttpRequest synchronous request</title>
     <script>
         window.onload = function () {
 
             document.getElementById("btnGet").onclick = function () {
 
                 var xhr = new XMLHttpRequest();
-                // Создание объекта для HTTP запроса.
+                // Creating an object for an HTTP request
 
                 xhr.open("GET", "testfile.html", false);
-                // Настройка объекта для отправки синхронного GET запроса
+                // Configure an object to send a synchronous GET request
 
                 xhr.send();
-                // Отправка запроса, так как запрос является синхронным,
+                // Sending a request because the request is synchronous
 
                 document.getElementById("output").innerHTML += xhr.responseText;
-                // responseText - текст ответа полученного с сервера.
+                // responseText - response text received from the server
             }
         }
     </script>

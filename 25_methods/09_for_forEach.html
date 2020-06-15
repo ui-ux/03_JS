@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_forEach</title>
+</head>
+<body>
+    <script>
+        let as = ['_Wer 1','_Wer 2','_Wer 3','_Wer 4'];
+
+        for (let a in as) {
+            console.log(a);
+        }
+
+        for (let a in as) {
+            console.log(as[a]);
+        }
+
+//
+        let as2 = ['Num 1','Num 2','Num 3','Num 4'];
+        as2.forEach(element => console.log(element));
+
+        console.log(as2);
+
+//
+
+        for (let s of as) {
+            console.log(s);
+        }
+        console.log(as);
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call</title>
+</head>
+<body>
+    <script>
+
+
+        var myObject = {
+            firstName:"John 1",
+            lastName: "Doe 1",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        console.log(myObject.fullName());
+
+//
+
+        var person = {
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        var person1 = {
+            firstName:"John 2",
+            lastName: "Doe 2"
+        }
+        var person2 = {
+            firstName:"Mary 3",
+            lastName: "Doe 3"
+        }
+        console.log(person.fullName.call(person1));
+        console.log(person.fullName.call(person2));
+
+//
+
+        var person = {
+            fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+        var person1 = {
+            firstName:"John 4",
+            lastName: "Doe 4"
+        }
+        var person2 = {
+            firstName:"Mary 5",
+            lastName: "Doe 5"
+        }
+        console.log(person.fullName.call(person1, "Oslo", "Norway")); 
+
+//
+        function sum() {
+        console.log(arguments);
+        console.log(typeof arguments);
+        console.log(arguments instanceof Array);
+
+        var sum = 0;
+
+        Array.prototype.forEach.call(arguments, function(value) {
+            sum += value;
+        });
+
+        console.log(sum);
+
+}
+
+        sum(1,2,3,4);
+    </script>  
+</body>
+</html>

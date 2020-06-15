@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply</title>
+</head>
+<body>
+    <script>
+        var person = {
+            fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+        var person1 = {
+            firstName:"John",
+            lastName: "Doe"
+        }
+        console.log(person.fullName.apply(person1, ["Oslo", "Norway"]));
+    </script>
+</body>
+</html>

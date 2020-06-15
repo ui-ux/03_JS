@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind</title>
+</head>
+<body>
+    <script>
+        let user = {
+            firstName: "Name"
+        };
+
+        function func(phrase) {
+            console.log(phrase + ', ' + this.firstName);
+        }
+
+        // this for user
+        let funcUser = func.bind(user);
+
+        funcUser("Hello");
+    </script>
+</body>
+</html>
