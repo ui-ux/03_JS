@@ -4,53 +4,71 @@
     <meta charset="UTF-8">
     <title>string</title>
     <script>
-        let a = "hello";
-        let b = "World";
-        let c = a + ' ' + b;
-        console.log('c =  a + b = ' + c); //concatenation of value
-        let d = 22;
-        let f = a + d;
-        console.log('f = a + d = ' + f);
-        let g = 22;
-        let j = 33;
-        let h = g + j;
-        console.log('h = g + j = ' + h);
-        let j1 = '33';
-        let h1 = g + j1;
-        console.log('h1 = g + j1 = ' + h1);
+        let stringA = "hello";
+        let stringB = "World";
+        let resultAplusB = stringA + ' ' + stringB;
+        console.log('resultAplusB =  stringA + stringB = ' + resultAplusB); // => hello World
+
+        let numberD = 22;
+        let resultAplusD = stringA + numberD;
+        console.log('resultAplusD = stringA + numberD = ' + resultAplusD); // => hello22
         
-        console.log('g * j1 = ' + g * j1);
-        
-        //console.log('g - j1 = ' + g - j1);// NaN
-        console.log('j1 - g = ' + (j1 - g));
-        console.log('j1 + g = ' + j1 + g);
-        
-        console.log('g / j1 = ' + g / j1);
-        let h2 = j1 + g;
-        console.log('h2 = j1 + g = ' + h2);
-        let h3 = +j1 + g;
-        console.log('h3 = +j1 + g = ' + h3);
-        
-        console.log(c);
-        console.log("first character in a string _ " + c.charAt(0));
-        console.log("last character in a string _ " + c.charAt(c.length-1));
-        console.log("last character in a string  _  "  + c[c.length-1]);
-        console.log("2nd 3rd 4th characters _ "  + c.slice(1,4));
-        console.log("position of the first character r _ "  + c.indexOf("r"));
-        console.log("last character position l _ "  + c.lastIndexOf("l"));
-        console.log("parsed into substrings "  + c.split(" "));
-        console.log("replaces all occurrences of a substring "  + c.replace("l","L"));
-        console.log("Upper "  + a.toUpperCase());
-        console.log("character by index [0] _ "  + c[0]);
-        
-        // split - Splits a string into substrings by the specified separator and returns an array of substrings
-        // charAt - returns the character at the specified position
-        // indexOf - returns the index of the first character specified in a string
-        // lastIndexOf - returns the index of the last character in the string of the specified character
-        // toLowerCase() - lowercase all characters
-        // toUpperCase() - uppercase
-        // substring -  returns a string between two given indices, not including indices
-        // substr - returns a string starting at the specified index, the specified length
+        let numberE = 22;
+        let numberJ = 33;
+        let resultEplusJ = numberE + numberJ;
+        console.log('resultEplusJ = numberE + numberJ = ' + resultEplusJ); // => 55
+        console.log('resultEplusJ = numberE * numberJ = ' + numberE * numberJ); // => 726
+        console.log('stringA - numberD = ' + stringA - numberD); // => NaN
+
+        let ev = '€';
+        console.log(ev);                // => €
+        console.log(ev.length);         // => 1
+        let ev1 = '💙'; 
+        console.log(ev1);               // => 💙
+        console.log(ev1.length);        // => 2 _____________one character - two unicodes____________
+        let charTest = 'Test';
+        console.log(charTest.charCodeAt(0));  // => 84
+        // ES6
+        console.log(ev.length);     // => 1
+        console.log(charTest.codePointAt(0));  // => 84
+
+        let hello = 'Hello, World';
+        let hello2 = 'Hello, World';
+        console.log(hello);                                                                 // => Hello, World
+        console.log("first character in a string =>  " + hello.charAt(0));                  // => H
+        console.log("last character in a string => " + hello.charAt(hello.length-1));       // => d
+        console.log("last character in a string => "  + hello[hello.length-1]);             // => d
+        console.log("2nd 3rd 4th characters => "  + hello.slice(1,4));                      // => ell
+        console.log("last three characters => "  + hello.slice(-3));                        // => rld
+        console.log("position of the first character r => "  + hello.indexOf("r"));         // => 9
+        console.log("position l, starting from the 5th => "  + hello.indexOf("l", 5));      // => 10
+        console.log("no substring 'zz' => "  + hello.indexOf("zz"));                        // => -1
+        console.log("last character position l => " + hello.lastIndexOf("l"));              // => 9
+        console.log("parsed into substrings => "  + hello.split("r"));                      // => Hello, Wo,ld     ___['Hello, Wo', 'ld']___
+        console.log("replaces all occurrences of a substring => "  + hello.replace("l","L"));  // => HeLlo, World
+        console.log("Upper case => "  + hello2.toUpperCase());                              // => HELLO, WORLD     ___return new strings___
+        console.log("Lower case => "  + hello2.toLowerCase());                              // => hello, world     ___return new strings___
+        console.log("character by index [0] => " + hello[0]);                               // => H
+
+        // boolean functions ES6
+        console.log("Beginning of a line with... => "  + hello.startsWith('Hell'));         // => true
+        console.log("Ends with... => "  + hello.endsWith('orld'));                          // => true
+        console.log("Includes... => " + hello.includes('orl'));                             // => true
+
+        // ES2017
+        // string completion functions
+        console.log("padStart => " + hello.padStart(15));           // => '    Hello, World'
+        console.log("padStart => " + hello.padStart(15, '*'));      // => '***Hello, World'
+        console.log("padEnd => " + hello.padEnd(15));               // => 'Hello, World   '
+        console.log("padEnd => " + hello.padEnd(15, '*'));          // => 'Hello, World***'
+
+        // Space truncation functions
+        console.log("remove spaces at the beginning and at the end => " + '  Hello, World  '.trim());   // => 'Hello, World'
+        console.log("remove spaces at the beginning => " + '  Hello, World  '.trimStart());             // => 'Hello, World  '
+        console.log("remove spaces at the end => " + '  Hello, World  '.trimEnd());                     // => '  Hello, World'
+
+        console.log("concat => " + hello.concat('!!!'));            // => Hello, World!!!
+        console.log("repeat => " + hello.repeat(2));                // => Hello, WorldHello, World
     </script>
 </head>
 <body>

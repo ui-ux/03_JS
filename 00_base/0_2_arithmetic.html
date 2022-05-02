@@ -6,43 +6,48 @@
     <script>
         let a = 23;
         let b = 4;
-        console.log('result = ' + a + b); //234
-        console.log('result = ' + (a + b));
-        console.log('result = ' + +a + +b);
+        console.log('result = ' + a + b); // => 234 (string concatenation)
+        console.log('result = ' + (a + b)); // => 27
 
-        console.log('result = ' + a - b); // ?? NaN
-        console.log('result = ' + (a - b));
-        console.log('result = ' + a * b);
-        console.log('result = ' + a / b);
-        console.log('result = ' + a % b);
+        console.log('result = ' + a - b); // => NaN
+        console.log('result = ' + (a - b)); // => 19
+        console.log('result = ' + a * b); // => 92
+        console.log('result = ' + a / b); // => 5.75
+        console.log('result = ' + a % b); // => 3
 
         let i = 4;
-        console.log("i++ = " + i++); //Postfix increment
+        // Postfix increment
+        console.log("i++ = " + i++); // => 4
 
         let s = 4;
-        console.log("++s = " + ++s); //Prefix increment
+        // Prefix increment
+        console.log("++s = " + ++s);  // => 5
 
         let f = 4;
-        console.log("f-- = " + f--); // Postfix decrement
+        // Postfix decrement
+        console.log("f-- = " + f--); // => 4
 
         let h = 4;
-        console.log("--h = " + --h); // Prefix decrement
+        // Prefix decrement
+        console.log("--h = " + --h); // => 3
 
         let q = -7; // Unary minus (-)
-        console.log("q = " + (q));
+        console.log("q = " + (q)); // => -7
+
         let result_q = -q;
-        console.log("result_q = " + (result_q));
+        console.log("result_q = " + (result_q)); // => 7
 
         let w = -7; // Unary plus (+)
-        console.log("w = " + (w));
+        console.log("w = " + (w)); // => -7
+
         let result_w = +w;
-        console.log("result_w = " + (result_w));
+        console.log("result_w = " + (result_w)); // => 7
 
         let t = "9"; // Unary plus (+)
-        console.log("t = " + (typeof t));
-        let result_t = +t;
-        console.log("result_t = " + (typeof result_t));
+        console.log("t = " + (typeof t)); // => string
 
+        let result_t = +t;
+        console.log("result_t = " + (typeof result_t)); // => number
 
         /*
             +=, -=, *=, /=
@@ -50,23 +55,23 @@
 
         let y = 3;
         y += 2;
-        console.log("+= " + (y));
+        console.log("+= " + (y)); // => 5
 
         let u = 3;
         u -= 2;
-        console.log("-= " + (u));
+        console.log("-= " + (u)); // => 1
 
         let p = 3;
         p *= 2;
-        console.log("*= " + (p));
+        console.log("*= " + (p)); // => 6
 
         let o = 3;
         o /= 2;
-        console.log("/= " + (o));
+        console.log("/= " + (o)); // => 1.5
 
         let m = 3;
         m %= 2;
-        console.log("%= " + (m));
+        console.log("%= " + (m)); // => 1
 
 
         /*
@@ -78,20 +83,22 @@
         let nn_mm = nn > mm;
         let nn_mm_2 = nn < mm;
 
-        console.log(' > ' + nn_mm);
-        console.log(' < ' + nn_mm_2);
+        console.log(' > ' + nn_mm); // => false
+        console.log(' < ' + nn_mm_2); // => true
 
         let nn_text = 'tehdhdy';
         let mm_text = 'itiiyyui';
         let mm_nn_text = nn_text > mm_text;
-        console.log(' text > ' + mm_nn_text );
+        console.log(' text > ' + mm_nn_text ); // => true
 
 
         let minText = 'a';
         let minNumber = 8;
         let mm_nn_text_number;
         mm_nn_text_number = 1 <= 'a';
-        console.log(mm_nn_text_number);
+        console.log(mm_nn_text_number); // => false
+        mm_nn_text_number2 = 1 >= 'a';
+        console.log(mm_nn_text_number2); // => false
 
         /*
         
@@ -111,8 +118,20 @@
 
         let num_3 = 3;
         let num_4 = 4;
-        let num_res = num_3 > 0 ||  num_4 >= 4;
-        console.log(num_res);
+        let num_res = num_3 > 4 || num_4 >= 4;
+        console.log(num_res); // => true
+
+        let not_integer1 = 0.9;
+        let not_integer2 = 0.7;
+        let not_integer3 = 0.5;
+        let not_integer4 = 0.3;
+        let result_ni_1_2 = not_integer1 - not_integer2;
+        let result_ni_3_4 = not_integer3 - not_integer4;
+        let result_ni = result_ni_1_2 == result_ni_3_4;
+        console.log(result_ni_1_2); // => 0.20000000000000007
+        console.log(result_ni_3_4); // => 0.2
+        console.log(result_ni); // => false
+        
     </script>
 </head>
 <body>

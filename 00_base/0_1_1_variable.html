@@ -9,17 +9,13 @@
         function f() {
             let local = "Local variable";
 
-            console.log(global);
-            console.log(local);
+            console.log(global); // => Global variable
+            console.log(local); // => Local variable
         }
 
-
         f();
-
-        console.log(global);
-
-        // ERROR: Attempting to access a local variable from outside the body of the function f ().
-        console.log(local);
+        console.log(global); // => Global variable
+        console.log(local); // => ERROR: Attempting to access a local variable from outside the body of the function f()
     </script>
 </head>
 <body>

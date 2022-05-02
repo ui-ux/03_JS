@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <title>variable</title>
     <script>
-        var a; // default undefined
-        console.log('var a = ' +  a);
+        var a;
+        console.log('var a = ' +  a); // => undefined
 
         var b = 1;
-        console.log('var b = ' +  b);
+        console.log('var b = ' +  b); // => 1
 
 
-        console.log('var c = ' +  c);
+        console.log('var c = ' +  c); // => undefined
         var c = 1;
 
         let s;
-        console.log('let s = ' +  s);
+        console.log('let s = ' +  s); // => undefined
 
         let d = 2;
-        console.log('let d = ' +  d);
+        console.log('let d = ' +  d); // => 2
 
 
-        console.log('let f = ' +  f);
+        console.log('let f = ' +  f); // Uncaught ReferenceError: Cannot access 'f' before initialization at 
         let f = 2;
-
-        console.log('const g = ' +  g);
-        const g = 2;
+        
+        // Uncaught ReferenceError: Cannot access 'g' before initialization at 
+        // console.log('const g = ' +  g);  
+        // const g = 2;
 
         // let, const Cannot access 'f' before initialization
     </script>

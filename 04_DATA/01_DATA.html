@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Date</title>
     <script>
+        // number of milliseconds since January 1, 1979
         let firstMonth = new Date(2020, 0, 1); // first day of the first month (0-first month)
         let firstMonthTime = new Date(2020,0,1,17,10,30); //same date в 17:10:30
         let currentDate = new Date(); // current date
@@ -14,7 +15,8 @@
         let currentDateAll = currentDate.toLocaleDateString(); // current date _00.00.0000_
         let currentTime = currentDate.toLocaleTimeString(); // current time
         let dateDifference = currentDate - firstMonth; // date difference: interval in milliseconds
-
+        let moonLanding = firstMonth; // converts timestamp to milliseconds
+        let iso = firstMonth; 
 
         console.log('firstMonth - ' + firstMonth);
         console.log('firstMonthTime ' + firstMonthTime);
@@ -26,6 +28,8 @@
         console.log('current date _00.00.0000_ ' + currentTime);
         console.log('current time ' + currentDateAll);
         console.log('date difference: interval in milliseconds ' + dateDifference);
+        console.log('getTime = ' + moonLanding.getTime()); // => 1577829600000
+        console.log('iso = ' + iso.toISOString()); // => 
     </script>
 </head>
 <body>
