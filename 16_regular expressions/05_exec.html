@@ -5,16 +5,18 @@
     <title>exec</title>
     <script>
          // The exec method works just like the match method of the string data type
-         // But always returns only one value or null
-         // During a global search (flag g), the method returns the found substring and continues the search further along the line
+         // But always returns only one value or null
+         // During a global search (flag g), the method returns the found substring and continues the search further along the line
         let test = "Line # 2 for testing the regular expression example";
         let pattern = /\d/g;
 
         let res;
+        
         while ((res = pattern.exec(test)) != null) {
-            alert("Found " + res + " in position "
-                    + res.index + "The next search begins with an index " + pattern.lastIndex);
+            console.log("Found " + res + "; in position " + res.index + "; The next search begins with an index " + pattern.lastIndex);
         }
+
+        console.log(pattern.exec(test));    // => ['2', index: 7, input: 'Line # 2 for testing the regular expression example', groups: undefined]
     </script>
 </head>
 <body>

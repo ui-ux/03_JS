@@ -6,14 +6,13 @@
     <script>
         // match() - takes a regular expression and returns an array with search results
         let text = "1 plus 2 is 3";
-        let res = text.match(/\d/g); // returns an array ['1', '2', '3']
-        console.log(res);
+        let res = text.match(/\d/g); // => array ['1', '2', '3']
+        console.log(res.length);
 
         let text2 = "Text 123 to test the example 421";
         let res2 = text2.match(/\d\d\d/g);
-
-        console.log("res2 = " + res2);
-        console.log("res2[0] = " + res2[1]);
+        console.log("res2 = " + res2);          // => 123,421
+        console.log("res2[0] = " + res2[1]);    // => 421
     </script>
 </head>
 <body>

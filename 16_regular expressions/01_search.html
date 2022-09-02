@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search</title>
     <script>
         // search () - returns the index of the first character found
         // substrings by pattern or -1 if the substring is not found
-        var text = "Line 123 for example testing";
-        var pattern = /\d\d\d/;
-        var firstIndex = text.search(pattern);
-        console.log("Substring found by index " + firstIndex);
+        let text = "Line 123 for example testing";
+        let pattern = /\d\d\d/;
+        let pattern2 = /\d\d\d\d/;
+        let firstIndex = text.search(pattern);
+        console.log("Substring found by index " + firstIndex); // => return index 5
+        console.log("Substring found by index " + text.search(pattern2)); // => return -1
     </script>
 </head>
 <body>
-
+    
 </body>
 </html>

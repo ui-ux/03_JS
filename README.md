@@ -10,6 +10,11 @@ Elementary types => -----invariable-----
 Object types - objects, arrays, functions, classes
 Object types => -----changeable-----
 
+global object - Window
+global objects - Math, JSON
+constructor functions - Date(), RegExp(), String(), Object(), Array()
+global functions - isNan(), parseInt(), eval
+
 Strings =>
 Concatenation of strings - operation of gluing objects of linear structure.
 split - Splits a string into substrings by the specified separator and returns an array of substrings
@@ -20,3 +25,18 @@ toLowerCase() - lowercase all characters
 toUpperCase() - uppercase
 substring - returns a string between two given indices, not including indices
 substr - returns a string starting at the specified index, the specified length
+
+Object
+objects are not comparable in size, but by link
+
+Hosting => variable hoisting
+
+Выражение
+Первичные выражения - константы и литералы значения
+Литерали - 1,23 "Helo"
+Первичные выражения - true, false, null, this
+Инициализаторы обьектов и массивов {}, []
+Выражение определения функции
+Выражения доступа к свойству выражение. идентификатор
+выражение[выражение]
+Выражение вызова f(); a.sort()

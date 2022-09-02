@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples</title>
+    <script>
+        // 00-00-0000
+        let pattern = /\d{1,2}-\d{1,2}-\d{4}/;
+        let text = "21-12-1991";
+        console.log(pattern.test(text));    // => true
+
+        // +38 (000) 000-00-00
+        pattern = /\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}/;
+        text = "+38 (063) 223-23-23";
+        console.log(pattern.test(text));    // => true
+
+        // Ivanov Ivan Ivanovich
+        pattern = /[a-zA-Z]+ [a-zA-Z]+ [a-zA-Z]+/;
+        text = "Ivanov Ivan Ivanovich";
+        console.log(pattern.test(text));    // => true
+
+        // ivanov.ivan@example.com
+        pattern = /\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b/i;
+        text = "ivanov.ivan@example.com";
+        console.log(pattern.test(text));    // => true
+
+        // hello.html
+        pattern = /\w+\.html/;
+        text = "hello.html";
+        console.log(pattern.test(text));    // => true
+
+        // http://www.abcd.com or https://www.abcd.com
+        pattern = /https?:\/\/[\w\d:\.:\?\&]+/g;
+        text = "http://www.abcd.com or https://www.abcd.com blah-blah-blah http://www.google.com:80";
+        let res;
+        while ((res = pattern.exec(text)) != null) {
+            console.log("Found " + res + " index " + res.index);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

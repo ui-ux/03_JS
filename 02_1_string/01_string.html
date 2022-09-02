@@ -9,6 +9,17 @@
         let resultAplusB = stringA + ' ' + stringB;
         console.log('resultAplusB =  stringA + stringB = ' + resultAplusB); // => hello World
 
+        let testNumber = 123;
+        console.log(testNumber);                // => 123
+        console.log(typeof(testNumber));        // => number
+        console.log(testNumber.toString(2));    // => 1111011
+
+        // methods
+        console.log(testNumber.toFixed(2));         // => 123.00
+        console.log(testNumber.toExponential(1));   // => 1.2e+2
+        console.log(testNumber.toPrecision(4));     // => 123.0
+
+
         let numberD = 22;
         let resultAplusD = stringA + numberD;
         console.log('resultAplusD = stringA + numberD = ' + resultAplusD); // => hello22

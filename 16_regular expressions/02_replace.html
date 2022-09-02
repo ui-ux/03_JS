@@ -6,10 +6,10 @@
     <script>
         // replace() - performs a search operation with a replacement
 
-        let text = "Example 123 Test  987 String";
-        let pattern = /\d\d\d/g; // g - global search - all occurrences, not just the first
-        let result = text.replace(pattern, " 321 ");
-        console.log(result);
+        let text = "Example 123 Test 987 String";
+        let pattern = /\d\d\d/g;    // g - global search - all occurrences, not just the first
+        let result = text.replace(pattern, "321");
+        console.log(result);        // => Example 321 Test 321 String
     </script>
 </head>
 <body>

@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <title>object</title>
     <script>
-        let a = {name:123, sname:321};
-        console.log(a.name);
-        console.log(a.sname);
+        let a = { name:123, sname:321 };
+        console.log(a.name);    // => 123
+        console.log(a.sname);   // => 321
 
-        console.log(a.age);
-        console.log(a);
+        console.log(a.age);     // => undefined
+        console.log(a);         // => {name: 123, sname: 321}
         a.age = 22;
-        console.log(a);
+        console.log(a);         // => {name: 123, sname: 321, age: 22}
 
         a.age = 33;
-        console.log(a);
+        console.log(a);         // => {name: 123, sname: 321, age: 33}
+
+
+        // Object Comparison
+        let obj1 = {};
+        let obj2 = {};
+        console.log(obj1 == obj2); // false
+        let obj3 = a;
+        let obj4 = a;
+        console.log(obj3 == obj3); // true
+
     </script>
 </head>
 <body>

@@ -82,6 +82,19 @@
         // ==   performs type conversion
         // ===  does not perform type conversion
 
+
+        let numberString = 0;
+        console.log(typeof(numberString));  // => number
+        let resST = numberString.toString();
+        console.log(typeof(resST));         // => string
+
+        console.log(typeof(+resST));        // => number
+        // or 
+        // console.log(typeof(+resST - 0));     // => number
+
+        console.log(typeof(!!resST));        // => boolean
+        
+
     </script>
 
 </head>

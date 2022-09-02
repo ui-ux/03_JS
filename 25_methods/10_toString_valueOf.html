@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toString and valueOf</title>
+</head>
+<body>
+    <script>
+
+        let num = 5;
+        let t = num.toString();
+        console.log(t);             // => 5
+        console.log(typeof(t));     // => string
+
+        let num2 = 5;
+        let text2 = num.toString(2);    // => 101 
+        // 2 - Convert a number to a string, using base 2 (binary):
+
+        console.log(text2);             // => 5
+        console.log(typeof(text2));     // => string
+
+        let arr = [1,2,3];
+        console.log(arr.toString()); // => "1,2,3"
+        console.log(typeof(arr.toString())); // => string
+
+        let d = new Date(2002,1,1);
+        console.log(d.toString());              // => Fri Feb 01 2002 00:00:00 GMT+0200 (Восточная Европа, стандартное время)
+        console.log(typeof(d.toString()));      // => string
+
+        // valueOf() returns the primitive value of a string
+
+
+        // The valueOf() method returns the primitive value of a string.
+        // The valueOf() method does not change the original string.
+        // The valueOf() method can be used to convert a string object into a string.
+
+        console.log(d.valueOf());               // 1012514400000
+        // number of milliseconds since January 1, 1970
+
+
+
+        // prefer-string
+        // toString() => next valueOf()
+
+        // prefer-number
+        // valueOf() => next toString()
+
+        // no-preference
+        // if Date => prefer-string
+
+    </script>
+</body>
+</html>
