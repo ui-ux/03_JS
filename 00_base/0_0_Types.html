@@ -1,104 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Types</title>
     <script>
-        /*Elementary Types*/
+      // or start script => node test.js
+      /*Elementary Types*/
 
-        var a = 10; /*type number*/
-        console.log(a); // => 10
-        console.log("typeof a - " + typeof a); // => number
+      var a = 10; /*type number*/
+      console.log(a); // => 10
+      console.log("typeof a - " + typeof a); // => number
 
-        var s = "text"; /*type sting*/
-        console.log(s); // => text
-        console.log("typeof s - " + typeof s); // => string
+      var s = "text"; /*type sting*/
+      console.log(s); // => text
+      console.log("typeof s - " + typeof s); // => string
 
-        var d = true; /*type boolean*/
-        console.log(d); // => true
-        console.log("typeof d - " + typeof d); // => boolean
+      var d = true; /*type boolean*/
+      console.log(d); // => true
+      console.log("typeof d - " + typeof d); // => boolean
 
-        var f = null; /*type null*/
-        // Null is a data type indicating the absence of an object.
-        console.log(f); // => null
-        console.log("typeof f - " + typeof f); // => object
+      var f = null; /*type null*/
+      // Null is a data type indicating the absence of an object.
+      console.log(f); // => null
+      console.log("typeof f - " + typeof f); // => object
 
-        var g = undefined; /*type undefined*/
-        console.log(g); // undefined
-        console.log("typeof g - " + typeof g); // undefined
+      var g = undefined; /*type undefined*/
+      console.log(g); // undefined
+      console.log("typeof g - " + typeof g); // undefined
 
+      /*Object Types*/
 
-        /*Object Types*/
+      var j = new Date(); // Object
+      console.log(j); // example - Sun Jan 09 2022 00:44:04
+      console.log("typeof j - " + typeof j); // object
 
-        var j = new Date(); // Object
-        console.log(j);  // example - Sun Jan 09 2022 00:44:04
-        console.log("typeof j - " + typeof j); // object
+      var k = [1, 2, 3, 4, "name"]; // Array
+      console.log(k); // Array(5)
+      console.log("typeof k - " + typeof k); // object
 
-        var k = [1,2,3,4,'name']; // Array
-        console.log(k); // Array(5)
-        console.log("typeof k - " + typeof k); // object
+      var z = function () {
+        return "f-n text";
+      };
+      console.log(z()); // => result function => f-n text
+      console.log(z); // => all function
+      console.log("typeof z() - " + typeof z);
 
-        var z = function () {
-            return 'f-n text'
-        };
-        console.log(z()); // => result function => f-n text
-        console.log(z); // => all function
-        console.log("typeof z() - " + typeof z);
+      // Assignment Operator "="; "!="; "!=="
+      let aa = 99;
+      let bb = "99";
+      let cc = aa == bb;
+      console.log("cc == " + cc);
+      let vv = aa === bb;
+      console.log("vv === " + vv);
 
+      let aaa = "text";
+      let bbb = "text";
+      let ccc = aaa == bbb;
+      console.log("ccc == " + ccc);
+      let vvv = aaa === bbb;
+      console.log("vvv === " + vvv);
 
-        // Assignment Operator "="; "!="; "!=="
-        let aa = 99;
-        let bb = '99';
-        let cc = (aa == bb);
-        console.log('cc == ' + cc);
-        let vv = (aa === bb);
-        console.log('vv === ' + vv);
+      let a_b_1 = 1;
+      let a_b_2 = true;
+      let a_b_12 = a_b_1 == a_b_2;
+      console.log("a_b_12 == " + a_b_12);
 
-        let aaa = 'text';
-        let bbb = "text";
-        let ccc = (aaa == bbb);
-        console.log('ccc == '+ ccc);
-        let vvv = (aaa === bbb);
-        console.log('vvv === ' + vvv);
+      let vv_12 = a_b_1 === a_b_2;
+      console.log("vv_12 === " + vv_12);
 
+      let a_b_c = null;
+      let a_b_d = undefined;
+      let a_b_c_d = a_b_c == a_b_d;
+      console.log("a_b_c_d  == " + a_b_c_d);
 
-        let a_b_1 = 1;
-        let a_b_2 = true;
-        let a_b_12 = (a_b_1 == a_b_2);
-        console.log('a_b_12 == ' + a_b_12);
+      let a_b_c_de = a_b_c === a_b_d;
+      console.log("a_b_c_d  === " + a_b_c_de);
 
-        let vv_12 = (a_b_1 === a_b_2);
-        console.log('vv_12 === ' + vv_12);
+      // ==   performs type conversion
+      // ===  does not perform type conversion
 
+      let numberString = 0;
+      console.log(typeof numberString); // => number
+      let resST = numberString.toString();
+      console.log(typeof resST); // => string
 
-        let a_b_c = null;
-        let a_b_d = undefined;
-        let a_b_c_d = (a_b_c == a_b_d);
-        console.log('a_b_c_d  == ' + a_b_c_d );
+      console.log(typeof +resST); // => number
+      // or
+      // console.log(typeof(+resST - 0));     // => number
 
-        let a_b_c_de = (a_b_c === a_b_d);
-        console.log('a_b_c_d  === ' + a_b_c_de );
-        
-        // ==   performs type conversion
-        // ===  does not perform type conversion
-
-
-        let numberString = 0;
-        console.log(typeof(numberString));  // => number
-        let resST = numberString.toString();
-        console.log(typeof(resST));         // => string
-
-        console.log(typeof(+resST));        // => number
-        // or 
-        // console.log(typeof(+resST - 0));     // => number
-
-        console.log(typeof(!!resST));        // => boolean
-        
-
+      console.log(typeof !!resST); // => boolean
     </script>
-
-</head>
-<body>
-
-</body>
+  </head>
+  <body></body>
 </html>
