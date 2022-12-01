@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+    <script>
+      let a = +prompt("enter", "11"); // +
+      switch (a) {
+        case 1:
+        case 11:
+          {
+            console.log("1 && 11");
+          }
+          break;
+        case 2:
+          {
+            console.log("2");
+          }
+          break;
+        default: {
+          console.log("default");
+        }
+      }
+
+      // or
+
+      let b = prompt("enter", "11");
+      switch (b) {
+        case "1":
+        case "11":
+          {
+            console.log("1 && 11");
+          }
+          break;
+        case "2":
+          {
+            console.log("2");
+          }
+          break;
+        default: {
+          console.log("default");
+        }
+      }
+
+      let c = 3;
+      switch (c) {
+        case 3: {
+          console.log("1"); // => 1
+        }
+        // without 'break;''
+        case 2: {
+          console.log("2"); // => 2
+        }
+        case 3: {
+          console.log("3"); // => 3
+        }
+      }
+
+      console.log("===========================");
+
+      function convert(x) {
+        switch (typeof x) {
+          case "number":
+            //console.log(x.toString());
+            console.log(x.toString(16));
+            break;
+          case "string":
+            console.log('"' + x + '"');
+            break;
+          default:
+            console.log(String(x));
+            break;
+        }
+      }
+      convert(254);
+      convert("test text");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-</head>
-<body>
-
-</body>
-<script>
+  </head>
+  <body></body>
+  <script>
     function Rectangle(w, h) {
-        this.width = w;
-        this.height = h;
+      this.width = w;
+      this.height = h;
     }
 
     Rectangle.prototype.getArea = function () {
-        return this.width * this.height;
+      return this.width * this.height;
     };
 
     Rectangle.prototype.name = "RECTANGLE";
 
     var rect1 = new Rectangle(100, 200);
 
-     // hasOwnProperty method from Object can be checked using it
-     // whether a property exists on a particular object without checking the properties of the prototype
-    document.write("hasOwnProperty('width') " + rect1.hasOwnProperty("width") + "<br />");
-    document.write("hasOwnProperty('name') " + rect1.hasOwnProperty("name") + "<br />");
+    // hasOwnProperty method from Object can be checked using it
+    // whether a property exists on a particular object without checking the properties of the prototype
+    document.write(
+      "hasOwnProperty('width') " + rect1.hasOwnProperty("width") + "<br />"
+    );
+    document.write(
+      "hasOwnProperty('name') " + rect1.hasOwnProperty("name") + "<br />"
+    );
 
-    // using the in keyword, you can check for the presence of 
+    // using the in keyword, you can check for the presence of
     // a property on an object including prototype properties
     document.write("'width' in rect1 " + ("width" in rect1) + "<br />");
     document.write("'name' in rect1 " + ("name" in rect1) + "<br />");
-</script>
+  </script>
 </html>
