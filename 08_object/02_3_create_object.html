@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object.create()</title>
+    <script>
+      let ol = Object.create({ x: 1, y: 2 }); // => [[Prototype]]: Object x: 1 y: 2
+      console.log(ol);
+
+      let ol2 = Object.create(null);
+      console.log(ol2); // => No properties
+    </script>
+  </head>
+  <body></body>
+</html>

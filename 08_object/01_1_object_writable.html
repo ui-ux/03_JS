@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object - writable</title>
+    <script>
+      const obj = { name: "John" };
+
+      console.log(obj.name); // => John
+
+      Object.defineProperty(obj, "name", {
+        writable: true,
+      });
+
+      obj.name = "Alice";
+      console.log(obj.name); // => Alice
+
+      // obj2
+      const obj2 = {
+        name: "John",
+      };
+
+      console.log(obj2.name); // => John
+
+      Object.defineProperty(obj2, "name", {
+        writable: false,
+      });
+
+      obj2.name = "Alice";
+      console.log(obj2.name); // => John
+    </script>
+  </head>
+  <body></body>
+</html>

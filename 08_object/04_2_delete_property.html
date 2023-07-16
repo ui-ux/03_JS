@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete_property</title>
+    <script>
+      let obj = { name: "NAME", sname: "SNAME", tname: "TNAME" };
+      for (elem in obj) {
+        console.log(obj[elem]); // => NAME SNAME TNAME
+      }
+
+      delete obj.name;
+      console.log(delete obj.name); // true
+
+      for (elem in obj) {
+        console.log(obj[elem]); // => SNAME TNAME
+      }
+
+      console.log(delete obj.name?.age); // true
+
+      // use configurable
+      let obj2 = { name: "NAME 2", sname: "SNAME 2", tname: "TNAME 2" };
+      for (elem in obj2) {
+        console.log(obj2[elem]); // => NAME2 SNAME2 TNAME2
+      }
+
+      Object.defineProperty(obj2, "name", {
+        configurable: false,
+      });
+
+      delete obj2.name;
+      console.log(delete obj2.name); // false
+
+      for (elem in obj2) {
+        console.log(obj2[elem]); // => NAME2 SNAME2 TNAME2
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

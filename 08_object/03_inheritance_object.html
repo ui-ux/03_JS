@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance_object</title>
+    <script>
+      let u = { r: 1 };
+      let c = Object.create(u);
+      console.log(u); // => {r: 1}
+      console.log(c); // has [[Prototype]]: Objectr: 1
+      c.x = 1;
+      c.y = 1;
+      c.r = 2;
+      console.log(u); // => { r: 1 }
+      console.log(c); // => { x: 1, y: 1, r: 2 }
+    </script>
+  </head>
+  <body></body>
+</html>

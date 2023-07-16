@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for of</title>
+    <script>
+      try {
+        let obj = { x: 1, y: 2, z: 3 };
+        for (let el of obj) {
+          console.log(el);
+        }
+      } catch {
+        console.log("Objects (default) are not iterable!!!!!!");
+      }
+      // use Object.keys()
+
+      try {
+        let obj_2 = { x: 1, y: 2, z: 3 };
+        for (let el of Object.keys(obj_2)) {
+          console.log(el); // => x, y, z
+        }
+      } catch {
+        console.log("use Object.keys()");
+      }
+
+      try {
+        let obj_2 = { x: 1, y: 2, z: 3 };
+        for (let el of Object.values(obj_2)) {
+          console.log(el); // => 1, 2, 3
+        }
+      } catch {
+        console.log("use Object.values()");
+      }
+
+      try {
+        let obj_2 = { x: 1, y: 2, z: 3 };
+        for (let [el, em] of Object.entries(obj_2)) {
+          console.log(el, em); // => x 1, y 2, z 3
+        }
+      } catch {
+        console.log("use Object.entries()");
+      }
+
+      // try {
+      //   let obj_3 = { x: 1, y: 2, z: 3 };
+      //   for (let el in Object.keys(obj_3)) {
+      //     console.log(el); // => 0, 1, 2
+      //   }
+      // } catch {
+      //   console.log("use Object.keys()");
+      // }
+    </script>
+  </head>
+  <body></body>
+</html>

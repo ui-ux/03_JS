@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>configurable</title>
+    <script>
+      const obj = {
+        name: "John",
+      };
+
+      Object.defineProperty(obj, "name", {
+        configurable: false,
+      });
+
+      console.log(obj.name); // => "John"
+
+      delete obj.name; // Deletion won't happen because configurable is set to false
+
+      console.log(obj.name); // => "John"
+
+      Object.defineProperty(obj, "name", {
+        configurable: true,
+      });
+
+      delete obj.name; // => The deletion will happen as now configurable is set to true
+
+      console.log(obj.name); // => Will print "undefined" because the property has been removed
+    </script>
+  </head>
+  <body></body>
+</html>

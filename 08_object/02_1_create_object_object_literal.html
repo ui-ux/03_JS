@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create_object_object_literal</title>
+    <script>
+      const prop = "color";
+      const car = {
+        brand: "Toyota",
+        [prop]: "red",
+      };
+
+      console.log(car); // => { brand: 'Toyota', color: 'red' }
+
+      // Nested object
+      const person = {
+        name: "John",
+        age: 30,
+        address: {
+          city: "New York",
+          country: "USA",
+        },
+      };
+
+      console.log(person); // => { name: 'John', age: 30, address: { city: 'New York', country: 'USA' } }
+    </script>
+  </head>
+  <body></body>
+</html>

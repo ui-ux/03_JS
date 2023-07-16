@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>enumerable</title>
+  </head>
+  <script>
+    // The enumerable property in JavaScript is used to determine whether an object's property
+    // will be enumerated when iterating through the object using a for...in loop or methods that use enumeration,
+    // such as Object.keys(), Object.values( ), Object.entries().
+
+    const obj = { name: "John", age: 30 };
+
+    for (let key in obj) {
+      console.log(key); // => "name" and "age" because both properties are enumerable: true
+    }
+
+    Object.defineProperty(obj, "age", {
+      enumerable: false,
+    });
+
+    for (let key in obj) {
+      console.log(key); // => "name"
+    }
+
+    console.log(Object.keys(obj)); // => ["name"]
+  </script>
+  <body></body>
+</html>

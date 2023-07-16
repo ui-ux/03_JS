@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property access error</title>
+    <script>
+      book = {};
+      console.log(book.subtitle); // => undefined
+
+      if (book) {
+        if (book.subtitle) {
+          console.log("is true");
+        } else {
+          console.log("is fasle 2");
+        }
+      } else {
+        console.log("is fasle 1");
+      }
+
+      // or in ES2020
+      console.log(book?.subtitle); // use "?"
+    </script>
+  </head>
+  <body></body>
+</html>

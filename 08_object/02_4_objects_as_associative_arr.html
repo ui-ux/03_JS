@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var person = {
+        name: "NAME",
+        sname: "SNAME",
+        fname: "FNAME",
+      };
+
+      for (elem in person) {
+        console.log(`${elem} ${person[elem]}`);
+        console.log(typeof elem);
+      }
+
+      const customer = {
+        adress0: "Address Line 1",
+        adress1: "Address Line 2",
+        adress2: "City",
+        adress3: "Country",
+      };
+
+      let addr = "";
+      for (let i = 0; i < 4; i++) {
+        addr += customer[`adress${i}`] + "\n";
+      }
+
+      console.log(addr);
+
+      let addr2 = "";
+      for (let i = 0; i < 4; i++) {
+        // addr2 += customer.adress.i + "\n"; // => dot "." does not allow the use of a numeric index in object properties
+      }
+
+      console.log(addr2);
+    </script>
+  </head>
+  <body></body>
+</html>
