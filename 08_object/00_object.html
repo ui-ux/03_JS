@@ -24,6 +24,24 @@
       let obj3 = a;
       let obj4 = a;
       console.log(obj3 == obj3); // true
+
+      let person = {
+        name: "NAME",
+        sname: "SNAME",
+        fname: "FNAME",
+        good: function () {
+          console.log("person.name = " + person.name); // => NAME
+          console.log("this.sname = " + this.sname); // => SNAME
+        },
+
+        add: function (fname) {
+          console.log("this.fname = " + this.fname); // => FNAME
+          this.fname = fname;
+          console.log("this.fname = " + this.fname); // => f_name
+        },
+      };
+      person.good();
+      person.add("f_name");
     </script>
   </head>
   <body></body>

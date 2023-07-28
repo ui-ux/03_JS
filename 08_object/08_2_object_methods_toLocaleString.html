@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toLocaleString</title>
+    <script>
+      const number = 1234567.89;
+
+      const formattedNumber = number.toLocaleString("en-US"); // US format
+      console.log(formattedNumber); // => "1,234,567.89"
+
+      const formattedNumberFR = number.toLocaleString("fr-FR"); // Format for France
+      console.log(formattedNumberFR); // => "1 234 567,89"
+
+      const formattedNumberIN = number.toLocaleString("en-IN"); // Format for India
+      console.log(formattedNumberIN); // => "12,34,567.89"
+    </script>
+  </head>
+  <body></body>
+</html>

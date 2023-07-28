@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>methods of acquisition and installation</title>
+    <script>
+      // Methods for getting and setting properties (getter and setter) allow you to control access
+      // to private properties of a class
+      const person = {
+        _name: "John",
+        _age: 30,
+
+        // Getter for property "name"
+        get name() {
+          return this._name;
+        },
+
+        // Setter for the "name" property
+        set name(value) {
+          this._name = value;
+        },
+
+        // Getter for the "age" property
+        get age() {
+          return this._age;
+        },
+
+        // Setter for the "age" property
+        set age(value) {
+          if (value >= 0) {
+            this._age = value;
+          } else {
+            console.error("Age cannot be negative!");
+          }
+        },
+      };
+
+      // Use getter and setter methods
+      console.log(person.name); // => "John"
+      console.log(person.age); // => 30
+
+      person.name = "Alice"; // Call the setter method for the "name" property
+      person.age = -5; // We call the setter method for the "age" property (it will show an error)
+
+      console.log(person.name); // Will print "Alice" (changed value from getter)
+      console.log(person.age); // Will output 30 (didn't change due to bug in setter)
+    </script>
+  </head>
+  <body></body>
+</html>

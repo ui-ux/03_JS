@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object extension</title>
+    <script>
+      let target = { x: 1 };
+      let target2 = { y: 2 };
+      console.log(target); // => {x: 1}
+      console.log(target2); // => {y: 2}
+
+      for (let key of Object.keys(target2)) {
+        target[key] = target2[key];
+      }
+      console.log(target); // => {x: 1, y: 2}
+
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { b: 3, c: 4 };
+      const obj3 = { c: 5, d: 6 };
+
+      const mergedObj = Object.assign({}, obj1, obj2, obj3);
+      console.log(mergedObj); // => { a: 1, b: 3, c: 5, d: 6 }
+
+      // or
+      // Object.assign(obj1, obj2, obj3);
+      // console.log(obj1);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>valueOf</title>
+    <script>
+      const obj = {
+        value: "42",
+        valueOf: function () {
+          return this.value;
+        },
+      };
+      console.log(typeof obj.value);
+
+      const result = obj.valueOf();
+      console.log(result); // => 42
+      console.log(typeof result); // => 42
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get</title>
+    <script>
+      const person = {
+        _name: "John",
+
+        // Getter for property "name"
+        get name() {
+          return this._name;
+        },
+      };
+
+      // Use the getter method
+      console.log(person.name); // => "John"
+
+      person.name = "Alice"; // don't have a setter method, so we can't change the value
+
+      console.log(person.name); // => "John" (the value remained unchanged)
+    </script>
+  </head>
+  <body></body>
+</html>

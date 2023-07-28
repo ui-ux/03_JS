@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serialization of objects</title>
+    <script>
+      // conversion of the structure of data objects into a string
+      // JSON.stringify() and JSON.parse().
+      const person = {
+        name: "John",
+        age: 30,
+        gender: "male",
+      };
+
+      // Serialization of an object into a JSON string
+      const jsonStr = JSON.stringify(person);
+
+      console.log(jsonStr); // => '{"name":"John","age":30,"gender":"male"}'
+
+      // Deserialization of a JSON string into an object
+      const parsedPerson = JSON.parse(jsonStr);
+
+      console.log(parsedPerson); // => { name: 'John', age: 30, gender: 'male' }
+    </script>
+  </head>
+  <body></body>
+</html>

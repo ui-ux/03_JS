@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>methods</title>
+  </head>
+  <body></body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>methods toString</title>
+    <script>
+      const person = {
+        name: "John",
+        age: 30,
+        gender: "male",
+        toString: function () {
+          return `${this.name} is ${this.age} years old and identifies as ${this.gender}.`;
+        },
+      };
+
+      console.log(person.toString()); // => "John is 30 years old and identifies as male."
+    </script>
+  </head>
+  <body></body>
+</html>
