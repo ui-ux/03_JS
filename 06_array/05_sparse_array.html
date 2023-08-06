@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sparse array</title>
+    <script>
+      let a = new Array(5);
+      console.log(a); // => [empty × 5]
+      console.log(a.length); // => 5
+
+      let b = [];
+      console.log(b); // => []
+      console.log(b.length); // => 0
+
+      b[10] = 0;
+      console.log(b); // =>  [empty × 10, 0]
+      console.log(b[0]); // => undefined
+      console.log(b[1]); // => undefined
+      console.log(b[2]); // => undefined
+      console.log(b[3]); // => undefined
+      console.log(b[4]); // => undefined
+      console.log(b[5]); // => undefined
+      console.log(b[6]); // => undefined
+      console.log(b[7]); // => undefined
+      console.log(b[8]); // => undefined
+      console.log(b[9]); // => undefined
+      console.log(b[10]); // => 0
+    </script>
+  </head>
+  <body></body>
+</html>

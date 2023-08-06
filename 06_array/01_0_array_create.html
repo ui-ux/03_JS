@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <script>
+      let arrEmpty = [];
+      console.log(arrEmpty); // => []
+
+      let arrBase = [1, 2, 3, 4];
+      console.log(arrBase); // => [1, 2, 3, 4]
+
+      let arrDifferent = [1.1, true, "3"];
+      console.log(arrDifferent); // => [1.1, true, '3']
+
+      let points = [
+        { x: 0, y: 0 },
+        { x: 1, y: 1 },
+      ];
+      console.log(points); // => [{…}, {…}]
+
+      let data = {
+        train1: [
+          [1, 2],
+          [3, 4],
+        ],
+        train2: [
+          [5, 6],
+          [7, 8],
+        ],
+      };
+      console.log(data); // => {train1: Array(2), train2: Array(2)}
+
+      let count = [1, , 5];
+      console.log(count); // => [1, empty, 5]
+      console.log(count.length); // => 3
+
+      let count2 = [, ,];
+      console.log(count2); // => [empty × 2]
+      console.log(count2.length); // => 2
+    </script>
+  </head>
+  <body></body>
+</html>
