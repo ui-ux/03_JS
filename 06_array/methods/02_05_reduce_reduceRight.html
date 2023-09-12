@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reduce() та reduceRight()</title>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let sum = numbers.reduce((a, c) => {
+        return a + c;
+      }, 0);
+      console.log(sum); // => 15 (1 + 2 + 3 + 4 + 5)
+
+      let sum2 = numbers.reduce((a, c) => {
+        return a + c;
+      }, 100);
+      console.log(sum2); // => 115 => 100 + (1 + 2 + 3 + 4 + 5)
+
+      let numbers2 = [1, 2, 7, 4, 1];
+      let s = numbers2.reduce((a, c) => {
+        return a > c ? a : c;
+      });
+      console.log(s); // => 7
+
+      // reduceRight
+      let numbers3 = [1, 2, 3, 4, 5];
+      let sumRight = numbers3.reduceRight((a, c) => {
+        return a + c;
+      }, 0);
+
+      console.log(sumRight); // => 15 (5 + 4 + 3 + 2 + 1)
+    </script>
+  </head>
+  <body></body>
+</html>

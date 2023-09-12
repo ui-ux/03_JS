@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>slice_splice_fill_copyWithin</title>
+    <script>
+      // slice
+      console.log(
+        "slice -----------------------------------------------------------"
+      );
+      let arr = [1, 2, 3, 4, 5, 6, 7];
+      console.log(arr); // => [1, 2, 3, 4, 5, 6, 7]
+      console.log("slice(0, 3) = " + arr.slice(0, 3)); // => [1, 2, 3]
+      console.log("slice(3) = " + arr.slice(3)); // => [4, 5, 6, 7]
+      console.log("slice(1,-1) = " + arr.slice(1, -1)); // => [2,3,4,5,6]
+      console.log(
+        "splice -----------------------------------------------------------"
+      );
+      // splice
+      let arr1 = [1, 2, 3, 4, 5, 6, 7];
+      console.log("arr1 = " + arr1); // 1,2,3,4,5,6,7
+      console.log("arr1.splice (1,3) = " + arr1.splice(1, 3)); // 2,3,4
+      console.log("arr1 = " + arr1); // 1,5,6,7
+
+      // splice (start index = 1, how many elements to remove = 0
+      let arr2 = [1, 2, 3, 4, 5, 6, 7];
+      console.log("arr2 = " + arr2); // 1,2,3,4,5,6,7
+      let abc = arr2.splice(2, 0, 111, 222);
+      console.log(
+        "arr.splice(1, 0, 111,222,444) = " + arr2.splice(2, 0, "111", "222") // []
+      );
+      console.log("arr2 = " + arr2); // 1,2,111,222,3,4,5,6,7
+
+      let arr3 = [1, 2, 3, 4, 5, 6, 7];
+      let arr4 = [1, 2, 3];
+      arr3.splice(2, 0, arr4);
+      console.log(arr3); // [1, 2, Array(3), 3, 4, 5, 6, 7]
+
+      // fill
+      let a = Array(5);
+      console.log(a); // [empty × 5]
+      a.fill(1);
+      console.log(a); // [1, 1, 1, 1, 1]
+
+      let b = Array(5);
+      console.log(b); // [empty × 5]
+      b.fill(33, 1);
+      console.log(b); // [empty, 33, 33, 33, 33]
+
+      let c = Array(5);
+      console.log(c); // [empty × 5]
+      c.fill(33, 1, -1);
+      console.log(c); // [empty, 33, 33, 33, empty]
+
+      // copyWithin()
+      let w = [1, 2, 3, 4, 5];
+      console.log(w); // [1, 2, 3, 4, 5]
+      console.log("w.copyWithin(2) = " + w.copyWithin(2)); // 1,2,1,2,3
+      console.log("w = " + w); // 1,2,1,2,3
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!--
+    slice() - Returns a fragment or subarray of the specified array
+-->
+
+<!--
+
+    splice () method is a universal method for inserting and deleting elements from an array
+             The method returns an array of deleted elements
+             arrayObj.splice (start, deleteCount, [elem1 [, elem2 [, ... [, elemN]]]])
+             start - The index in the array to start deletion from
+             deleteCount - The number of items to delete, starting at the start index
+             elem1, elem2, ..., elemN - Items to add to the array
+              Adding starts at position start
+
+-->

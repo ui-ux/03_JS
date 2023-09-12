@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sort-through-line</title>
+  </head>
+  <script>
+    let uniqueInOrder = (iterable) => {
+      iterable = iterable.split("");
+      let result = [];
+      let last;
+
+      for (var i = 0; i < iterable.length; i++) {
+        if (iterable[i] !== last) {
+          result.push((last = iterable[i]));
+        }
+      }
+      console.log(result);
+    };
+
+    uniqueInOrder("AAAABBBCCDAABBB"); // => ['A', 'B', 'C', 'D', 'A', 'B']
+  </script>
+  <body></body>
+</html>

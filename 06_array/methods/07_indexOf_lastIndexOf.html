@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexOf_lastIndexOf</title>
+    <script>
+      // arr.indexOf(searchElement[, fromIndex = 0])
+      let arr = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+      console.log("arr = " + arr);
+      console.log("indexOf(5) = " + arr.indexOf(5)); // 4
+      console.log("lastIndexOf(5) = " + arr.lastIndexOf(5)); // 9
+      console.log("indexOf(99) = " + arr.indexOf(99)); // -1
+
+      console.log("lastIndexOf(5) = " + arr.indexOf(5, 6)); // 9
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sort_reverse</title>
+    <script>
+      let arr = [11, 2, 51, 4, 5, 6, 77, 18, 9];
+      console.log(arr.sort()); // [11, 18, 2, 4, 5, 51, 6, 77, 9]
+
+      arr.sort((a, b) => {
+        return a - b;
+      });
+      console.log(arr); // [2, 4, 5, 6, 9, 11, 18, 51, 77]
+
+      arr.sort((a, b) => {
+        return b - a;
+      });
+      console.log(arr); // [77, 51, 18, 11, 9, 6, 5, 4, 2]
+
+      let a = ["ant", "But", "cat", "Dog"];
+      console.log(a.sort()); // => ['But', 'Dog', 'ant', 'cat']
+
+      a.sort((s, t) => {
+        let a = s.toLowerCase();
+        let b = t.toLowerCase();
+        if (a < b) {
+          return -1;
+        }
+        if (a > b) {
+          return 1;
+        }
+        return 0;
+      });
+      console.log(a); // ['ant', 'But', 'cat', 'Dog']
+
+      let b = a.reverse();
+      console.log(b); // ['Dog', 'cat', 'But', 'ant']
+    </script>
+  </head>
+  <body></body>
+</html>

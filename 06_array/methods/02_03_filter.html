@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter</title>
+  </head>
+  <script>
+    let words = [
+      "spray",
+      "limit",
+      "elite",
+      "exuberant",
+      "destruction",
+      "present",
+    ];
+    const result = words.filter((word) => word.length > 6);
+    console.log(result); // => ['exuberant', 'destruction', 'present']
+
+    let a = [1, 2, 3, 4];
+    let arr = a.filter((value) => {
+      return value > 2;
+    });
+    console.log(arr); // => [3, 4]
+
+    let a2 = [1, , , 4];
+    let arr2 = a2.filter((value) => {
+      return value > 2;
+    });
+    console.log(arr2); // => [4]
+
+    let a3 = [1, null, undefined, 5];
+    let arr3 = a3.filter((value) => {
+      return value > 2;
+    });
+    console.log(arr3); // => [4]
+  </script>
+  <body></body>
+</html>

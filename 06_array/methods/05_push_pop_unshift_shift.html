@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>push_pop_unshift_shift</title>
+    <script>
+      let arr1 = [1, 2, 3, 4, 5];
+      let arrPush = arr1.push(99);
+      console.log(arr1); // => [1, 2, 3, 4, 5, 99]
+      console.log(arrPush); // => 6
+
+      let arr2 = [1, 2, 3, 4, 5];
+      let arrPop = arr2.pop();
+      console.log(arr2); // => [1, 2, 3, 4]
+      console.log(arrPop); // => 5
+
+      let arr3 = [1, 2, 3, 4, 5];
+      let arrUnshift = arr3.unshift(99);
+      console.log(arr3); // => [99, 1, 2, 3, 4, 5]
+      console.log(arrUnshift); // => 6
+
+      let arr4 = [1, 2, 3, 4, 5];
+      let arrShift = arr4.shift();
+      console.log(arr4); // => [2, 3, 4, 5]
+      console.log(arrShift); // => 1
+    </script>
+  </head>
+  <body></body>
+</html>

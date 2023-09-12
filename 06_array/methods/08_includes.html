@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>includes</title>
+    <script>
+      const pets = ["cat", "dog", "bat", 11, "22", NaN, undefined, ,];
+      console.log(pets.includes("cat")); // true
+      console.log(pets.includes("hors")); // false
+      console.log(pets.includes(11)); // true
+      console.log(pets.includes(22)); // false
+      console.log(pets.includes("22")); // true
+      console.log(pets.includes(null)); // false
+      console.log(pets.includes(NaN)); // true
+      console.log(pets.includes(undefined)); // true
+    </script>
+  </head>
+  <body></body>
+</html>

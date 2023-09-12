@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete</title>
+    <script>
+      let arr = [11, 12, 1];
+      console.log(arr); // => [11, 12, 13]
+      console.log(arr.length); // => 3
+      delete arr[2];
+      console.log(2 in arr); // => false
+      console.log(arr); // => [11, 12, empty]
+      console.log(arr.length); // => 3
+    </script>
+  </head>
+  <body></body>
+</html>

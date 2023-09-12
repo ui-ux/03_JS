@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for forEach</title>
+    <script>
+      let array = ["a", "b", "c"];
+      array.forEach((element) => {
+        console.log(element); // => a => b => c
+      });
+
+      let array1 = [1, 2, 3];
+      console.log(array1); // => [1, 2, 3]
+      let sum = 0;
+      array1.forEach((el) => {
+        sum += el;
+      });
+      console.log(array1); // => [1, 2, 3]
+
+      array1.forEach((value, index, arr) => {
+        arr[index] = value + 2;
+      });
+      console.log(array1); // => [3, 4, 5]
+    </script>
+  </head>
+  <body></body>
+</html>

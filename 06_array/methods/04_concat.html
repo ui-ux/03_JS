@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concat</title>
+  </head>
+  <body>
+    <script>
+      /*         
+            concat () - complements the elements of the array with the given elements in the parameters
+        */
+
+      let arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+      let arr2 = ["test1", "test2"];
+      let arrAll1 = arr1.concat(arr2);
+      console.log(arrAll1); // => [1, 2, 3, 4, 5, 6, 7, 8, 'test1', 'test2']
+
+      let arrAll2 = [].concat(arr1, arr2);
+      console.log(arrAll2); // => [1, 2, 3, 4, 5, 6, 7, 8, 'test1', 'test2']
+
+      let arrAll3 = [...arr1, ...arr2];
+      console.log(arrAll3); // => [1, 2, 3, 4, 5, 6, 7, 8, 'test1', 'test2']
+
+      let b = [1, 2, 3];
+      let input = prompt("Enter a new array element:", "");
+      while (input != null) {
+        b = b.concat(input);
+        input = prompt("Enter a new array element:", "");
+      }
+      console.log(b.join(","));
+    </script>
+  </body>
+</html>

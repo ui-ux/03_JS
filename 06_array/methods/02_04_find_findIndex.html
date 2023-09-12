@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find() findIndex()</title>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let evenNumber = numbers.find((element) => {
+        return element === 5;
+      });
+      console.log(evenNumber); // => 5 (value)
+
+      let numbers1 = [1, 2, 3, 4, 5];
+      let evenNumber1 = numbers1.find((element) => {
+        return element === 6; // => undefined
+      });
+      console.log(evenNumber1); // => 2
+
+      let numbers3 = [1, 2, 3, 4, 5];
+      let evenIndex = numbers3.findIndex((element) => {
+        return element === 5;
+      });
+
+      console.log(evenIndex); // => 4 (index)
+    </script>
+  </head>
+  <body></body>
+</html>
