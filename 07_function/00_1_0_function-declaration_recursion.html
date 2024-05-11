@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recursion</title>
+    <script>
+      let a;
+      function factorial(x) {
+        if (x < 1) {
+          return 1;
+        }
+        return x * factorial(x - 1);
+      }
+
+      let f = factorial(3);
+      console.log(f); // 6
+    </script>
+  </head>
+  <body></body>
+</html>

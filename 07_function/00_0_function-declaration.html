@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function-declaration</title>
+    <script>
+      // example 1
+      function print(o) {
+        for (let p in o) {
+          console.log(`${p}: ${o[p]}`);
+        }
+      }
+
+      print("string"); // => 0: s 1: t 2: r 3: i 4: n 5: g
+      print([1, 2, 3]); // => 0: 1 1: 2 2: 3
+
+      //example 2
+      function ditance(x1, y1, x2, y2) {
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        console.log(Math.sqrt(dx * dx + dy * dy));
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      ditance(1, 1, -1, -1); // => 2.8284271247461903
+    </script>
+  </head>
+  <body></body>
+</html>

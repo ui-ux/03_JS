@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>method call</title>
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName() {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const fullName = person.fullName();
+      console.log(fullName); // => John Doe
+
+      const person2 = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: () => {
+          return `${this.firstName} ${this.lastName}`;
+        },
+      };
+
+      const fullName2 = person.fullName();
+      console.log(fullName2); // => "undefined undefined"
+    </script>
+  </head>
+  <body></body>
+</html>

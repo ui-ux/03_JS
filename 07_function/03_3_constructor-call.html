@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor call</title>
+    <script>
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        this.fullName = function () {
+          return this.firstName + " " + this.lastName;
+        };
+      }
+
+      var person1 = new Person("John", "Doe");
+      var person2 = new Person("Jane", "Smith");
+
+      console.log(person1.fullName()); // => "John Doe"
+      console.log(person2.fullName()); // => "Jane Smith"
+    </script>
+  </head>
+  <body></body>
+</html>

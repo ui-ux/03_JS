@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>optional parameters</title>
+    <script>
+      function getproperyName(o, a) {
+        // if (a === undefined) {
+        //   a = [];
+        // }
+        // or
+        a = a || [];
+        console.log(o);
+        console.log(a);
+      }
+
+      getproperyName(12, 12); // 12 12
+      getproperyName(12); // 12 []
+    </script>
+  </head>
+  <body></body>
+</html>

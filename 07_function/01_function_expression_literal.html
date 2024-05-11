@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function expression</title>
+    <script>
+      sq(5); // => 25
+      function sq(x) {
+        console.log(x * x);
+      }
+
+      // f(5); // => 01_function_expression.html:13 Uncaught ReferenceError: Cannot access 'f' before initialization
+      let f = function sq2(x) {
+        console.log(x * x);
+      };
+
+      f(5); // => 25
+    </script>
+  </head>
+  <body></body>
+</html>

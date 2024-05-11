@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decrucurization of function arguments into parameters</title>
+    <script>
+      // Destructuring function arguments is a way to obtain the individual values of arguments passed
+      // to a function by unwrapping an object or array of arguments.
+
+      // Destructuring arguments in the form of an object:
+      function printUserInfo({ name, age }) {
+        console.log(`Name: ${name}, Age: ${age}`);
+      }
+
+      const user = { name: "John", age: 30 };
+      printUserInfo(user); // => "Name: John, Age: 30"
+
+      // Destructuring arguments in the form of an array:
+
+      function getFirstAndLast([first, , last]) {
+        console.log(`First: ${first}, Last: ${last}`);
+      }
+
+      const names = ["John", "Doe", "Smith"];
+      getFirstAndLast(names); // => "First: John, Last: Smith"
+
+      // Combining object and array argument destructuring:
+      function printInfo({ name, age }, [hobby1, hobby2]) {
+        console.log(`Name: ${name}, Age: ${age}`);
+        console.log(`Hobbies: ${hobby1}, ${hobby2}`);
+      }
+
+      const user2 = { name: "Alice", age: 25 };
+      const hobbies = ["Reading", "Painting"];
+      printInfo(user2, hobbies);
+      // =>
+      // "Name: Alice, Age: 25"
+      // "Hobbies: Reading, Painting"
+    </script>
+  </head>
+  <body></body>
+</html>

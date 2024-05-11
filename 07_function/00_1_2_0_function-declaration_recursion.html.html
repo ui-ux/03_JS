@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recursion</title>
+    <script>
+      function sum(num) {
+        if (num === 0) {
+          return 0;
+        } else {
+          return num + sum(--num);
+        }
+      }
+
+      sum(3);
+      console.log(sum(3));
+    </script>
+  </head>
+  <body></body>
+</html>

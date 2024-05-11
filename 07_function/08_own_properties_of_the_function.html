@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>own properties of the function</title>
+    <script>
+      function calculateArea(radius) {
+        return Math.PI * radius * radius;
+      }
+
+      // Adding a custom property to a function
+      calculateArea.units = "square meters";
+
+      // Reference to a function's own property
+      console.log(`Area calculation units: ${calculateArea.units}`);
+
+      const radius = 5;
+      const area = calculateArea(radius);
+      console.log(
+        `The area of the circle with a radius of ${radius} ${calculateArea.units} is ${area}`
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

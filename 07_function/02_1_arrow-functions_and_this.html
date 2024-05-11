@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow functions</title>
+    <script>
+      function regularFunction() {
+        console.log("Regular function this:", this);
+      }
+
+      const arrowFunction = () => {
+        console.log("Arrow function this:", this);
+      };
+
+      const obj = {
+        prop: "I'm an object property",
+        regularFunction: regularFunction,
+        arrowFunction: arrowFunction,
+      };
+
+      regularFunction(); // => Regular function this: Window {...
+      // Displays the context of a global object (for example, a window in a browser).
+      arrowFunction(); // => Arrow function this: Window { ...
+      // Displays the context of a global object (for example, a window in a browser).
+
+      obj.regularFunction(); // => Regular function this: {prop: "I'm an object property", ...
+      // Returns the context of the object obj.
+      obj.arrowFunction(); // => Arrow function this: Window { ...
+      // Returns the context of the global object (does not change the context).
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: () => {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const fullName = person.fullName();
+      console.log(fullName); // =>"undefined undefined"
+    </script>
+  </head>
+  <body></body>
+</html>
