@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global and Local Scope</title>
+    <script>
+        let globalMessage = "Global variable";
+
+        function showScopeExample() {
+            let localMessage = "Local variable";
+
+            console.log(globalMessage); // => Global variable
+            console.log(localMessage); // => Local variable
+        }
+
+        showScopeExample();
+        console.log(globalMessage); // => Global variable
+        console.log(localMessage); // => ERROR: Attempting to access a local variable from outside the function
+    </script>
+</head>
+<body>
+
+</body>
+</html>

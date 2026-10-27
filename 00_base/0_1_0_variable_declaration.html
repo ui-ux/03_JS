@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Declaration and Initialization</title>
+    <script>
+        var uninitializedVar;
+        console.log('var uninitializedVar = ' + uninitializedVar); // => undefined
+
+        var initializedVar = 1;
+        console.log('var initializedVar = ' + initializedVar); // => 1
+
+
+        console.log('var hoistedVar = ' + hoistedVar); // => undefined
+        var hoistedVar = 1;
+
+        let uninitializedLet;
+        console.log('let uninitializedLet = ' + uninitializedLet); // => undefined
+
+        let initializedLet = 2;
+        console.log('let initializedLet = ' + initializedLet); // => 2
+
+
+        console.log('let temporalDeadZoneValue = ' + temporalDeadZoneValue); // Uncaught ReferenceError: Cannot access 'temporalDeadZoneValue' before initialization
+        let temporalDeadZoneValue = 2;
+        
+        // Uncaught ReferenceError: Cannot access 'constantValue' before initialization
+        // console.log('const constantValue = ' + constantValue);
+        // const constantValue = 2;
+
+        // let and const cannot be accessed before initialization
+    </script>
+</head>
+<body>
+
+</body>
+</html>

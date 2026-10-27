@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Operators</title>
+    <script>
+      let firstNumber = 23;
+      let secondNumber = 4;
+      console.log("result = " + firstNumber + secondNumber); // => 234 (string concatenation)
+      console.log("result = " + (firstNumber + secondNumber)); // => 27
+
+      console.log("result = " + firstNumber - secondNumber); // => NaN
+      console.log("result firstNumber - secondNumber = " + (firstNumber - secondNumber)); // => 19
+      console.log("result firstNumber * secondNumber = " + firstNumber * secondNumber); // => 92
+      console.log("result firstNumber / secondNumber = " + firstNumber / secondNumber); // => 5.75
+      console.log("result firstNumber % secondNumber = " + (firstNumber % secondNumber)); // => 3
+      console.log("result secondNumber ** 2 = " + secondNumber ** 2); // => 16
+
+      let postIncrementValue = 4;
+      // Postfix increment
+      console.log("postIncrementValue++ = " + postIncrementValue++); // => 4
+
+      let preIncrementValue = 4;
+      // Prefix increment
+      console.log("++preIncrementValue = " + ++preIncrementValue); // => 5
+
+      let postDecrementValue = 4;
+      // Postfix decrement
+      console.log("postDecrementValue-- = " + postDecrementValue--); // => 4
+
+      let preDecrementValue = 4;
+      // Prefix decrement
+      console.log("--preDecrementValue = " + --preDecrementValue); // => 3
+
+      let negativeNumber = -7; // Unary minus (-)
+      console.log("negativeNumber = " + negativeNumber); // => -7
+
+      let negatedNumber = -negativeNumber;
+      console.log("negatedNumber = " + negatedNumber); // => 7
+
+      let numberForUnaryPlus = -7; // Unary plus (+)
+      console.log("numberForUnaryPlus = " + numberForUnaryPlus); // => -7
+
+      let unaryPlusResult = +numberForUnaryPlus;
+      console.log("unaryPlusResult = " + unaryPlusResult); // => 7
+
+      let numericString = "9"; // Unary plus (+)
+      console.log("numericString = " + typeof numericString); // => string
+
+      let convertedNumber = +numericString;
+      console.log("convertedNumber = " + typeof convertedNumber); // => number
+
+      /*
+            +=, -=, *=, /=
+        */
+
+      let addAssignmentValue = 3;
+      addAssignmentValue += 2;
+      console.log("+= " + addAssignmentValue); // => 5
+
+      let subtractAssignmentValue = 3;
+      subtractAssignmentValue -= 2;
+      console.log("-= " + subtractAssignmentValue); // => 1
+
+      let multiplyAssignmentValue = 3;
+      multiplyAssignmentValue *= 2;
+      console.log("*= " + multiplyAssignmentValue); // => 6
+
+      let divideAssignmentValue = 3;
+      divideAssignmentValue /= 2;
+      console.log("/= " + divideAssignmentValue); // => 1.5
+
+      let remainderAssignmentValue = 3;
+      remainderAssignmentValue %= 2;
+      console.log("%= " + remainderAssignmentValue); // => 1
+
+      /*
+            <, >, <=, >=
+        */
+
+      let smallerNumber = 10;
+      let largerNumber = 20;
+      let isSmallerNumberGreater = smallerNumber > largerNumber;
+      let isSmallerNumberLess = smallerNumber < largerNumber;
+
+      console.log(" > " + isSmallerNumberGreater); // => false
+      console.log(" < " + isSmallerNumberLess); // => true
+
+      let firstText = "tehdhdy";
+      let secondText = "itiiyyui";
+      let isFirstTextGreater = firstText > secondText;
+      console.log(" text > " + isFirstTextGreater); // => true
+
+      let isOneLessThanNonNumericText = 1 <= "a";
+      console.log(isOneLessThanNonNumericText); // => false
+      let isOneGreaterThanNonNumericText = 1 >= "a";
+      console.log(isOneGreaterThanNonNumericText); // => false
+
+      /*
+        
+        AND (&&):
+                    true  && true = true
+                    false && true = false
+                    true  && false = false
+                    false && false = false
+        
+        OR (||):
+                    true  || true = true
+                    false || true = true
+                    true  || false = true
+                    false || false = false
+        
+        */
+
+      let numberThree = 3;
+      let numberFour = 4;
+      let logicalOrResult = numberThree > 4 || numberFour >= 4;
+      console.log(logicalOrResult); // => true
+
+      let firstDecimal = 0.9;
+      let secondDecimal = 0.7;
+      let thirdDecimal = 0.5;
+      let fourthDecimal = 0.3;
+      let firstDifference = firstDecimal - secondDecimal;
+      let secondDifference = thirdDecimal - fourthDecimal;
+      let differencesAreEqual = firstDifference == secondDifference;
+      console.log(firstDifference); // => 0.20000000000000007
+      console.log(secondDifference); // => 0.2
+      console.log(differencesAreEqual); // => false
+
+      // eval
+      console.log(eval("2 + 2")); // => 4
+      console.log(eval(new String("2 + 2"))); // => 2 + 2
+      console.log(eval("2 + 2") === eval("4")); // => true
+      console.log(eval("2 + 2") === eval(new String("2 + 2"))); // => false
+    </script>
+  </head>
+  <body></body>
+</html>

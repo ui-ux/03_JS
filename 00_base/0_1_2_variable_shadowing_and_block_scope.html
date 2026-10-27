@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Shadowing and Block Scope</title>
+    <script>
+        let outerMessage = "Outer variable";
+
+        function showShadowingExample() {
+            let shadowedMessage = "Local variable";
+            console.log(shadowedMessage); // => Local variable
+        }
+        
+        showShadowingExample();
+        console.log(outerMessage); // => Outer variable
+        
+        for (let counter = 0; counter < 10; counter++) {
+            console.log(counter); // => 0 1 2 3 4 5 6 7 8 9
+            var functionScopedValue = 99;
+            let blockScopedValue = 999;
+        }
+
+        console.log(functionScopedValue); // => 99
+        console.log(blockScopedValue); // Uncaught ReferenceError: blockScopedValue is not defined
+
+        // A let variable declared in a for loop is not visible outside the loop block.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
