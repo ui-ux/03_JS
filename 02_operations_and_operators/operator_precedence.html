@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Operators and Operator Precedence</title>
+    <script>
+      // Operators are listed from higher precedence to lower precedence.
+      // Parentheses can make the intended order explicit.
+
+      // 1. Grouping: parentheses are evaluated first.
+      console.log("(2 + 3) * 4 = " + (2 + 3) * 4); // => (2 + 3) * 4 = 20
+
+      // 2. Member access, computed access, calls, optional chaining, and new with arguments.
+      const operatorExample = {
+        value: 5,
+        multiply(factor) {
+          return this.value * factor;
+        },
+      };
+      console.log("operatorExample.value = " + operatorExample.value); // => operatorExample.value = 5
+      console.log('operatorExample["value"] = ' + operatorExample["value"]); // => operatorExample["value"] = 5
+      console.log("operatorExample.multiply(2) = " + operatorExample.multiply(2)); // => operatorExample.multiply(2) = 10
+      console.log("operatorExample.multiply?.(3) = " + operatorExample.multiply?.(3)); // => operatorExample.multiply?.(3) = 15
+      console.log("operatorExample.missing?.value = " + operatorExample.missing?.value); // => operatorExample.missing?.value = undefined
+      const currentDate = new Date(0);
+      console.log("new Date(0).getTime() = " + currentDate.getTime()); // => new Date(0).getTime() = 0
+
+      // 3. new without arguments.
+      function ExampleConstructor() {
+        this.value = 7;
+      }
+      const constructedValue = new ExampleConstructor();
+      console.log("new ExampleConstructor().value = " + constructedValue.value); // => new ExampleConstructor().value = 7
+
+      // 4. Postfix increment and decrement return the old value.
+      let postfixValue = 3;
+      console.log("postfixValue++ = " + postfixValue++); // => postfixValue++ = 3
+      console.log("postfixValue after ++ = " + postfixValue); // => postfixValue after ++ = 4
+      console.log("postfixValue-- = " + postfixValue--); // => postfixValue-- = 4
+      console.log("postfixValue after -- = " + postfixValue); // => postfixValue after -- = 3
+
+      // 5. Prefix increment/decrement, unary plus/minus, bitwise NOT, logical NOT,
+      // typeof, void, delete, and await.
+      let prefixValue = 3;
+      console.log("++prefixValue = " + ++prefixValue); // => ++prefixValue = 4
+      console.log("--prefixValue = " + --prefixValue); // => --prefixValue = 3
+      const numericText = " 5 ";
+      console.log("+numericText = " + +numericText); // => +numericText = 5
+      console.log("-5 = " + -5); // => -5 = -5
+      console.log("~5 = " + ~5); // => ~5 = -6
+      console.log("!true = " + !true); // => !true = false
+      console.log("typeof 5 = " + typeof 5); // => typeof 5 = number
+      console.log("void 0 = " + String(void 0)); // => void 0 = undefined
+      const removableProperty = { value: 1 };
+      console.log("delete removableProperty.value = " + delete removableProperty.value); // => delete removableProperty.value = true
+      console.log("property after delete = " + ("value" in removableProperty)); // => property after delete = false
+
+      async function showAwaitExample() {
+        const awaitedValue = await Promise.resolve("done");
+        console.log("awaited value = " + awaitedValue); // => awaited value = done
+      }
+      showAwaitExample();
+
+      // 6. Exponentiation is right-associative: 2 ** (3 ** 2) is 512.
+      console.log("2 ** 3 ** 2 = " + (2 ** 3 ** 2)); // => 2 ** 3 ** 2 = 512
+
+      // 7. Multiplication, division, and remainder.
+      console.log("12 * 2 = " + (12 * 2)); // => 12 * 2 = 24
+      console.log("12 / 3 = " + (12 / 3)); // => 12 / 3 = 4
+      console.log("12 % 5 = " + (12 % 5)); // => 12 % 5 = 2
+
+      // 8. Addition and subtraction.
+      console.log("10 + 3 = " + (10 + 3)); // => 10 + 3 = 13
+      console.log("10 - 3 = " + (10 - 3)); // => 10 - 3 = 7
+      console.log('"value: " + 3 = ' + ("value: " + 3)); // => "value: " + 3 = value: 3
+
+      // 9. Bit shifts.
+      console.log("5 << 1 = " + (5 << 1)); // => 5 << 1 = 10
+      console.log("-5 >> 1 = " + (-5 >> 1)); // => -5 >> 1 = -3
+      console.log("-5 >>> 1 = " + (-5 >>> 1)); // => -5 >>> 1 = 2147483645
+
+      // 10. Relational operators: <, <=, >, >=, in, instanceof.
+      console.log("3 < 5 = " + (3 < 5)); // => 3 < 5 = true
+      console.log("3 <= 3 = " + (3 <= 3)); // => 3 <= 3 = true
+      console.log("5 > 3 = " + (5 > 3)); // => 5 > 3 = true
+      console.log("5 >= 6 = " + (5 >= 6)); // => 5 >= 6 = false
+      console.log('"value" in operatorExample = ' + ("value" in operatorExample)); // => "value" in operatorExample = true
+      console.log("currentDate instanceof Date = " + (currentDate instanceof Date)); // => currentDate instanceof Date = true
+
+      // 11. Equality operators.
+      console.log('5 == "5" = ' + (5 == "5")); // => 5 == "5" = true
+      console.log('5 === "5" = ' + (5 === "5")); // => 5 === "5" = false
+      console.log("5 != 3 = " + (5 != 3)); // => 5 != 3 = true
+      console.log('5 !== "5" = ' + (5 !== "5")); // => 5 !== "5" = true
+
+      // 12-14. Bitwise AND, XOR, and OR.
+      console.log("5 & 3 = " + (5 & 3)); // => 5 & 3 = 1
+      console.log("5 ^ 3 = " + (5 ^ 3)); // => 5 ^ 3 = 6
+      console.log("5 | 3 = " + (5 | 3)); // => 5 | 3 = 7
+
+      // 15-17. Logical AND, OR, and nullish coalescing return one of their operands.
+      console.log('"left" && "right" = ' + ("left" && "right")); // => "left" && "right" = right
+      console.log('"" || "fallback" = ' + ("" || "fallback")); // => "" || "fallback" = fallback
+      console.log("0 ?? 10 = " + (0 ?? 10)); // => 0 ?? 10 = 0
+      console.log("null ?? 10 = " + (null ?? 10)); // => null ?? 10 = 10
+      console.log("(false || null) ?? 10 = " + ((false || null) ?? 10)); // => (false || null) ?? 10 = 10
+
+      // 18. Conditional (ternary) operator.
+      console.log('"ready" ? "yes" : "no" = ' + ("ready" ? "yes" : "no")); // => "ready" ? "yes" : "no" = yes
+
+      // 19. Assignment operators, including compound and logical assignments.
+      let assignedValue = 5;
+      console.log("assignedValue = 5 -> " + assignedValue); // => assignedValue = 5 -> 5
+      assignedValue += 2;
+      console.log("assignedValue += 2 -> " + assignedValue); // => assignedValue += 2 -> 7
+      assignedValue -= 2;
+      console.log("assignedValue -= 2 -> " + assignedValue); // => assignedValue -= 2 -> 5
+      assignedValue *= 2;
+      console.log("assignedValue *= 2 -> " + assignedValue); // => assignedValue *= 2 -> 10
+      assignedValue /= 2;
+      console.log("assignedValue /= 2 -> " + assignedValue); // => assignedValue /= 2 -> 5
+      assignedValue %= 3;
+      console.log("assignedValue %= 3 -> " + assignedValue); // => assignedValue %= 3 -> 2
+      assignedValue **= 3;
+      console.log("assignedValue **= 3 -> " + assignedValue); // => assignedValue **= 3 -> 8
+      assignedValue <<= 1;
+      console.log("assignedValue <<= 1 -> " + assignedValue); // => assignedValue <<= 1 -> 16
+      assignedValue >>= 2;
+      console.log("assignedValue >>= 2 -> " + assignedValue); // => assignedValue >>= 2 -> 4
+      assignedValue >>>= 1;
+      console.log("assignedValue >>>= 1 -> " + assignedValue); // => assignedValue >>>= 1 -> 2
+      assignedValue &= 3;
+      console.log("assignedValue &= 3 -> " + assignedValue); // => assignedValue &= 3 -> 2
+      assignedValue ^= 3;
+      console.log("assignedValue ^= 3 -> " + assignedValue); // => assignedValue ^= 3 -> 1
+      assignedValue |= 4;
+      console.log("assignedValue |= 4 -> " + assignedValue); // => assignedValue |= 4 -> 5
+      let logicalAndAssignment = 1;
+      logicalAndAssignment &&= 2;
+      console.log("logicalAndAssignment &&= 2 -> " + logicalAndAssignment); // => logicalAndAssignment &&= 2 -> 2
+      let logicalOrAssignment = 0;
+      logicalOrAssignment ||= 3;
+      console.log("logicalOrAssignment ||= 3 -> " + logicalOrAssignment); // => logicalOrAssignment ||= 3 -> 3
+      let nullishAssignment;
+      nullishAssignment ??= 4;
+      console.log("nullishAssignment ??= 4 -> " + nullishAssignment); // => nullishAssignment ??= 4 -> 4
+      let firstAssigned;
+      let secondAssigned;
+      [firstAssigned, secondAssigned] = [6, 7];
+      console.log("destructuring assignment = " + firstAssigned + ", " + secondAssigned); // => destructuring assignment = 6, 7
+
+      // 20. yield and yield* are used inside generator functions.
+      function* operatorGenerator() {
+        yield 1;
+        yield* [2, 3];
+      }
+      console.log("yield values = " + [...operatorGenerator()]); // => yield values = 1,2,3
+
+      // 21. Comma evaluates each expression and returns the last value.
+      let firstCommaValue;
+      let lastCommaValue;
+      const commaResult = (firstCommaValue = 1, lastCommaValue = 2);
+      console.log("comma result = " + commaResult); // => comma result = 2
+      console.log("comma assignments = " + firstCommaValue + ", " + lastCommaValue); // => comma assignments = 1, 2
+
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -6,76 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>switch</title>
     <script>
-      let a = +prompt("enter", "11"); // +
-      switch (a) {
+      let enteredNumber = +prompt("enter", "11"); // Unary + converts the prompt string to a number.
+      switch (enteredNumber) {
         case 1:
         case 11:
           {
-            console.log("1 && 11");
+            console.log("Number is 1 or 11."); // default input => Number is 1 or 11.
           }
           break;
         case 2:
           {
-            console.log("2");
+            console.log("Number is 2."); // => Number is 2.
           }
           break;
         default: {
-          console.log("default");
+          console.log("Number did not match 1, 2, or 11."); // => Number did not match 1, 2, or 11.
         }
       }
 
-      // or
+      // switch also works with strings; case values must have the same type.
 
-      let b = prompt("enter", "11");
-      switch (b) {
+      let enteredText = prompt("enter", "11");
+      switch (enteredText) {
         case "1":
         case "11":
           {
-            console.log("1 && 11");
+            console.log('Text is "1" or "11".'); // default input => Text is "1" or "11".
           }
           break;
         case "2":
           {
-            console.log("2");
+            console.log('Text is "2".'); // => Text is "2".
           }
           break;
         default: {
-          console.log("default");
+          console.log("Text did not match 1, 2, or 11."); // => Text did not match 1, 2, or 11.
         }
       }
 
-      let c = 3;
-      switch (c) {
+      // Without break, execution continues into the following cases (fall-through).
+      let fallThroughValue = 3;
+      switch (fallThroughValue) {
         case 3: {
-          console.log("1"); // => 1
+          console.log("Matched case 3."); // => Matched case 3.
         }
-        // without 'break;''
         case 2: {
-          console.log("2"); // => 2
+          console.log("Fell through case 2."); // => Fell through case 2.
         }
-        case 3: {
-          console.log("3"); // => 3
+        case 1: {
+          console.log("Fell through case 1."); // => Fell through case 1.
         }
       }
 
-      console.log("===========================");
+      console.log("==========================="); // => ===========================
 
-      function convert(x) {
-        switch (typeof x) {
+      function formatValue(value) {
+        switch (typeof value) {
           case "number":
-            //console.log(x.toString());
-            console.log(x.toString(16));
+            console.log(value.toString(16)); // => numbers are formatted as hexadecimal
             break;
           case "string":
-            console.log('"' + x + '"');
+            console.log('"' + value + '"'); // => strings are wrapped in double quotes
             break;
           default:
-            console.log(String(x));
+            console.log(String(value)); // => other values are converted to strings
             break;
         }
       }
-      convert(254);
-      convert("test text");
+      formatValue(254); // => fe
+      formatValue("test text"); // => "test text"
+      formatValue(true); // => true
     </script>
   </head>
   <body></body>

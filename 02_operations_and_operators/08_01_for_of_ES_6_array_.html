@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>for of</title>
     <script>
-      let data = [1, 2, 3, 4, 5],
-        sum = 0;
-      for (let element of data) {
-        console.log(element); // => 1_2_3_4_5
-        //console.log(sum); // => 0_1_3_6_10
-        sum += element;
+      const numbers = [1, 2, 3, 4, 5];
+      let sum = 0;
+      for (const number of numbers) {
+        console.log(number); // => 1, then 2, 3, 4, 5
+        sum += number;
       }
-      console.log(sum); //=> 15
+      console.log("sum = " + sum); // => sum = 15
     </script>
   </head>
   <body></body>

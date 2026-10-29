@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>yield</title>
     <script>
-      function* range(from, to) {
-        for (let i = from; i <= to; i++) {
-          yield i;
+      function* createRange(start, end) {
+        for (let value = start; value <= end; value++) {
+          yield value;
         }
       }
 
-      const iterator = range(1, 5);
+      const rangeIterator = createRange(1, 5);
 
-      for (const value of iterator) {
-        console.log(value);
+      for (const rangeValue of rangeIterator) {
+        console.log(rangeValue); // => 1, then 2, 3, 4, 5
       }
     </script>
   </head>

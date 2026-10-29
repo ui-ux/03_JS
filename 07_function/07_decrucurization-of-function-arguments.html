@@ -3,20 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decrucurization of function arguments into parameters</title>
+    <title>Destructuring Assignment and Function Parameters</title>
     <script>
-      // Destructuring function arguments is a way to obtain the individual values of arguments passed
-      // to a function by unwrapping an object or array of arguments.
+      // Array destructuring assigns iterable values to variables by position.
+      const coordinates = [10, 20];
+      const [x, y] = coordinates;
+      console.log(x); // => 10
+      console.log(y); // => 20
 
-      // Destructuring arguments in the form of an object:
+      // Use commas to skip values and ... to collect the remaining values.
+      const colors = ["red", "green", "blue"];
+      const [firstColor, , ...remainingColors] = colors;
+      console.log(firstColor); // => red
+      console.log(remainingColors); // => ["blue"]
+
+      // Object destructuring assigns properties by name; defaults apply to missing properties.
+      const user = { name: "John", age: 30 };
+      const { name: userName, age, city = "Unknown" } = user;
+      console.log(userName); // => John
+      console.log(age); // => 30
+      console.log(city); // => Unknown
+
+      // Object destructuring can also select a nested property.
+      const settings = { display: { theme: "dark" } };
+      const {
+        display: { theme },
+      } = settings;
+      console.log(theme); // => dark
+
+      // Strings are iterable, so their characters can be assigned with an array pattern.
+      const [firstLetter, secondLetter] = "JS";
+      console.log(firstLetter); // => J
+      console.log(secondLetter); // => S
+
+      // Destructure an object returned by a function.
+      function createUser() {
+        return { name: "Maria", age: 28 };
+      }
+
+      const { name: returnedUserName, age: returnedUserAge } = createUser();
+      console.log(returnedUserName); // => Maria
+      console.log(returnedUserAge); // => 28
+
+      // Destructuring function arguments uses the same object and array patterns.
       function printUserInfo({ name, age }) {
         console.log(`Name: ${name}, Age: ${age}`);
       }
 
-      const user = { name: "John", age: 30 };
       printUserInfo(user); // => "Name: John, Age: 30"
-
-      // Destructuring arguments in the form of an array:
 
       function getFirstAndLast([first, , last]) {
         console.log(`First: ${first}, Last: ${last}`);
@@ -25,15 +59,14 @@
       const names = ["John", "Doe", "Smith"];
       getFirstAndLast(names); // => "First: John, Last: Smith"
 
-      // Combining object and array argument destructuring:
+      // Combining object and array parameter destructuring:
       function printInfo({ name, age }, [hobby1, hobby2]) {
         console.log(`Name: ${name}, Age: ${age}`);
         console.log(`Hobbies: ${hobby1}, ${hobby2}`);
       }
 
-      const user2 = { name: "Alice", age: 25 };
       const hobbies = ["Reading", "Painting"];
-      printInfo(user2, hobbies);
+      printInfo({ name: "Alice", age: 25 }, hobbies);
       // =>
       // "Name: Alice, Age: 25"
       // "Hobbies: Reading, Painting"

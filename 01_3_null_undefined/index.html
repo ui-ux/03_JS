@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,8 @@
     <script>
       let nameUndefined = undefined;
       let nameNull = null;
+      let anotherNull = null;
+      let anotherUndefined = undefined;
 
       console.log(typeof nameNull); // => object
       console.log(typeof nameUndefined); // => undefined
@@ -15,11 +17,12 @@
       console.log(nameNull == nameUndefined); // => true
       console.log(nameNull === nameUndefined); // = > false
 
-      console.log(nameNull == nameNull); // => true
-      console.log(nameUndefined == nameUndefined); // = > true
+      // Different variables with the same value compare as equal.
+      console.log(nameNull == anotherNull); // => true
+      console.log(nameNull === anotherNull); // => true
 
-      console.log(nameNull === nameNull); // => true
-      console.log(nameUndefined === nameUndefined); // = > true
+      console.log(nameUndefined == anotherUndefined); // => true
+      console.log(nameUndefined === anotherUndefined); // => true
     </script>
   </head>
   <body></body>

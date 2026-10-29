@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbol</title>
+    <script>
+      // Symbol creates a unique value. Its optional description is for debugging.
+      const firstId = Symbol("id");
+      const secondId = Symbol("id");
+
+      console.log(typeof firstId); // => symbol
+      console.log(firstId === secondId); // => false; each Symbol() call creates a unique value
+      console.log(firstId.description); // => id
+
+      // Assigning a Symbol to another variable preserves the same value.
+      const sameId = firstId;
+      console.log(firstId === sameId); // => true
+
+      // Symbols can be used as object property keys.
+      const user = {
+        name: "Alex",
+        [firstId]: 123,
+      };
+
+      console.log(user[firstId]); // => 123
+      console.log(Object.keys(user)); // => ["name"]; Symbol keys are not included
+      console.log(Object.getOwnPropertySymbols(user)); // => [Symbol(id)]
+
+      // Symbol.for() reuses a Symbol with the same key from the global registry.
+      const sharedId = Symbol.for("shared-id");
+      const anotherSharedId = Symbol.for("shared-id");
+
+      console.log(sharedId === anotherSharedId); // => true
+      console.log(Symbol.keyFor(sharedId)); // => shared-id
+    </script>
+  </head>
+  <body></body>
+</html>

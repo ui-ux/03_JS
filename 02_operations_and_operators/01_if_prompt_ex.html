@@ -6,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>if</title>
     <script>
-      let i = prompt("enter i", "10");
-      if (i === 10) {
-        console.log("i = " + i);
+      let inputString = prompt("enter i", "10");
+      if (inputString === 10) {
+        console.log("This condition is false because prompt returns a string."); // => not printed
       }
-      console.log("i = " + i);
-      console.log("i = " + typeof i);
+      console.log("inputString = " + inputString); // default input => inputString = 10
+      console.log("typeof inputString = " + typeof inputString); // => typeof inputString = string
 
-      let b = +prompt("enter", "10");
-      if (b === 10) {
-        console.log("b = " + b);
+      let convertedNumber = +prompt("enter", "10");
+      if (convertedNumber === 10) {
+        console.log("convertedNumber === 10"); // default input => convertedNumber === 10
       }
-      console.log("b = " + b);
-      console.log("b = " + typeof b);
+      console.log("convertedNumber = " + convertedNumber); // default input => convertedNumber = 10
+      console.log("typeof convertedNumber = " + typeof convertedNumber); // => typeof convertedNumber = number
 
-      let c = prompt("enter", "10");
-      console.log("c typeof = " + typeof c);
-      let nn = parseInt(c);
-      console.log("nn typeof = " + typeof nn);
+      let numericString = prompt("enter a number", "10.75");
+      console.log("numericString = " + numericString); // default input => numericString = 10.75
+      console.log("typeof numericString = " + typeof numericString); // prompt returns a string
 
-      if (nn === 10) {
-        console.log("nn = " + b);
-      }
-      console.log("nn = " + nn);
-      console.log("nn = " + typeof nn);
+      // parseInt(string, radix) reads an integer in the given number base; decimals are discarded.
+      let parsedInteger = parseInt(numericString, 10);
+      console.log("parsedInteger = " + parsedInteger); // default input "10.75" => 10
+      console.log("typeof parsedInteger = " + typeof parsedInteger); // => number
+
+      // parseFloat(string) reads a decimal number and preserves its fractional part.
+      let parsedFloat = parseFloat(numericString);
+      console.log("parsedFloat = " + parsedFloat); // default input "10.75" => 10.75
+      console.log("typeof parsedFloat = " + typeof parsedFloat); // => number
     </script>
   </head>
   <body></body>

@@ -7,49 +7,49 @@
     <title>for of</title>
     <script>
       try {
-        let obj = { x: 1, y: 2, z: 3 };
-        for (let el of obj) {
-          console.log(el);
+        const coordinates = { x: 1, y: 2, z: 3 };
+        for (const coordinate of coordinates) {
+          console.log(coordinate); // => not reached; the plain object is not iterable
         }
       } catch {
-        console.log("Objects (default) are not iterable!!!!!!");
+        console.log("Plain objects are not iterable with for...of."); // => Plain objects are not iterable with for...of.
       }
-      // use Object.keys()
+      // Use Object.keys() to iterate over property names.
 
       try {
-        let obj_2 = { x: 1, y: 2, z: 3 };
-        for (let el of Object.keys(obj_2)) {
-          console.log(el); // => x, y, z
+        const coordinates = { x: 1, y: 2, z: 3 };
+        for (const propertyName of Object.keys(coordinates)) {
+          console.log(propertyName); // => x, then y, z
         }
       } catch {
-        console.log("use Object.keys()");
-      }
-
-      try {
-        let obj_2 = { x: 1, y: 2, z: 3 };
-        for (let el of Object.values(obj_2)) {
-          console.log(el); // => 1, 2, 3
-        }
-      } catch {
-        console.log("use Object.values()");
+        console.log("Object.keys() could not be iterated."); // => not printed
       }
 
       try {
-        let obj_2 = { x: 1, y: 2, z: 3 };
-        for (let [el, em] of Object.entries(obj_2)) {
-          console.log(el, em); // => x 1, y 2, z 3
+        const coordinates = { x: 1, y: 2, z: 3 };
+        for (const coordinate of Object.values(coordinates)) {
+          console.log(coordinate); // => 1, then 2, 3
         }
       } catch {
-        console.log("use Object.entries()");
+        console.log("Object.values() could not be iterated."); // => not printed
+      }
+
+      try {
+        const coordinates = { x: 1, y: 2, z: 3 };
+        for (const [propertyName, coordinate] of Object.entries(coordinates)) {
+          console.log(propertyName, coordinate); // => x 1, then y 2, z 3
+        }
+      } catch {
+        console.log("Object.entries() could not be iterated."); // => not printed
       }
 
       // try {
-      //   let obj_3 = { x: 1, y: 2, z: 3 };
-      //   for (let el in Object.keys(obj_3)) {
-      //     console.log(el); // => 0, 1, 2
+      //   const coordinates = { x: 1, y: 2, z: 3 };
+      //   for (const index in Object.keys(coordinates)) {
+      //     console.log(index); // => 0, then 1, 2
       //   }
       // } catch {
-      //   console.log("use Object.keys()");
+      //   console.log("Could not iterate over the object keys.");
       // }
     </script>
   </head>

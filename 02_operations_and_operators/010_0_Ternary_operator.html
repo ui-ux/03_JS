@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ternary</title>
+    <title>Ternary Operator</title>
     <script>
-      let a = 1;
-      let b = 2;
-      let c = 5;
-      let d = 7;
+      let firstNumber = 1;
+      let secondNumber = 2;
+      let smallerNumberResult = 5;
+      let largerNumberResult = 7;
 
-      let m = a < b ? c : d;
+      let selectedResult =
+        firstNumber < secondNumber ? smallerNumberResult : largerNumberResult;
 
-      console.log(m);
+      console.log("selectedResult = " + selectedResult); // => selectedResult = 5
     </script>
   </head>
   <body></body>

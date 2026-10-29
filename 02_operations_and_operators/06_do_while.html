@@ -9,29 +9,29 @@
       let counter = 1;
 
       do {
-        console.log(counter);
+        console.log(counter); // => 1, then 2, 3, 4, 5, 6, 7, 8, 9
         counter++;
-      } while (counter < 10); // => 1_2_3_4_5_6_7_8_9
-      // while (false);
+      } while (counter < 10);
+      // The body runs once even if the condition is false.
 
-      console.log("---------------------------------");
+      console.log("---------------------------------"); // => ---------------------------------
 
-      function arr(x) {
-        let l = x.length,
-          i = 0;
-        console.log("x.lenght = " + x.length);
+      function logArrayItems(items) {
+        let itemIndex = 0;
+        console.log("items.length = " + items.length); // => 3, then 0
 
-        if (l == 0) {
-          console.log("empty");
+        if (items.length === 0) {
+          console.log("Array is empty."); // => Array is empty.
         } else {
           do {
-            console.log(x[i]);
-          } while (++i < l);
+            console.log(items[itemIndex]); // => 1, then 2, 3
+            itemIndex++;
+          } while (itemIndex < items.length);
         }
       }
 
-      arr([1, 2, 3]);
-      arr([]);
+      logArrayItems([1, 2, 3]);
+      logArrayItems([]);
     </script>
   </head>
   <body></body>
